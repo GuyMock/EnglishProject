@@ -1,0 +1,31 @@
+/* ─────────────  ROOT  ───────────── */
+:root {
+  --blue:#003366;
+  --light:#f5f7fa;
+  --card:#ffffff;
+  --radius:12px;
+}
+
+/* ─────────────  GLOBAL  ───────────── */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',sans-serif;background:var(--light);color:#333;line-height:1.6;}
+h1,h2,h3{font-weight:700;margin-bottom:.5rem;}
+
+/* ─────────────  NAVBAR  ───────────── */
+header{background:var(--blue);color:#fff;text-align:center;padding:1.2rem 1rem;position:sticky;top:0;z-index:1000;}
+nav{margin-top:.5rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
+nav a{color:#fff;text-decoration:none;font-weight:600;transition:opacity .2s;}
+nav a:hover{opacity:.7;}
+
+/* ─────────────  SECTIONS  ───────────── */
+.section{padding:3rem 10vw;}
+.section:nth-of-type(even){background:#e9eef5;} /* subtle stripe */
+
+/* ─────────────  CARD LAYOUT  ───────────── */
+.card{display:flex;flex-wrap:wrap;gap:2rem;background:var(--card);border-radius:var(--radius);box-shadow:0 4px 10px rgba(0,0,0,.07);margin:2rem 0;overflow:hidden;transform:translateY(40px);opacity:0;transition:all .6s ease;}
+.card img{width:320px;min-width:280px;object-fit:cover;}
+.card-text{flex:1;padding:2rem;}
+.card.show{transform:translateY(0);opacity:1;}
+
+/* ─────────────  FOOTER  ───────────── */
+footer{background:var(--blue);color:#fff;text-align:center;padding:1rem;margin-top:2rem;}
