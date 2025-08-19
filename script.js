@@ -1,9 +1,11 @@
 /* Smooth scroll */
 document.querySelectorAll('header nav a').forEach(link=>{
-  link.addEventListener('click',e=>{
+  link.addEventListener('click', e=>{
     e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-            .scrollIntoView({behavior:'smooth'});
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
   });
 });
 
@@ -16,5 +18,5 @@ const showCards = () => {
     if(top < trigger) card.classList.add('show');
   });
 };
-document.addEventListener('scroll',showCards);
+document.addEventListener('scroll', showCards);
 showCards(); // run on load

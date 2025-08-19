@@ -2,119 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anthony Mauclair's DP English Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Progress bar -->
+  <div id="progress"></div>
+
   <!-- ───────────  NAVBAR  ─────────── -->
-  <header>
-    <h1>My DP English Portfolio</h1>
+  <header id="top">
+    <div class="brand">
+      <h1>My DP English Portfolio</h1>
+      <p class="sub">IBDP Language A, SL and HL</p>
+    </div>
     <nav>
       <a href="#home">Home</a>
       <a href="#paper1">Paper 1</a>
       <a href="#paper2">Paper 2</a>
       <a href="#oral">Oral</a>
+      <a href="#guidelines">Text Selection</a>
+      <a href="#sl">SL Plan</a>
+      <a href="#hl">HL Plan</a>
+      <a href="#checklist">Course Checklist</a>
     </nav>
+    <button id="themeToggle" aria-label="Toggle theme">◐</button>
   </header>
 
   <main>
     <!-- ───────────  HOME  ─────────── -->
     <section id="home" class="section">
-      <h2>Welcome</h2>
-      <p>This site keeps all my IB English work-Paper 1, Paper 2 and the Individual Oral-nicely organised. Use the menu or scroll to explore 🚀</p>
+      <h2 class="reveal">Welcome</h2>
+      <p class="lead reveal">
+        This site keeps my IB English work in one place, with clean sections for Paper 1, Paper 2, the Individual Oral, and our 2025-2027 text selection plans.
+      </p>
+      <ul class="quick reveal">
+        <li>Fast scroll and section highlights</li>
+        <li>Clear tables for SL and HL texts</li>
+        <li>No extra images added</li>
+      </ul>
     </section>
 
     <!-- ───────────  PAPER 1  ─────────── -->
     <section id="paper1" class="section">
-      <h2>Paper 1 – Visual Texts</h2>
+      <h2 class="reveal">Paper 1 - Visual Texts</h2>
 
       <!-- CARD 1 -->
-      <article class="card">
+      <article class="card reveal">
         <img src="assets/elephant.png" alt="Elephant turning into sand" />
         <div class="card-text">
           <h3>Elephant Turning into Sand</h3>
           <ul>
-            <li><b>PURPOSE :</b> Show desertification kills wildlife.</li>
-            <li><b>AUDIENCE :</b> Anyone who cares about the planet.</li>
-            <li><b>STYLE :</b> Elephant fades to dust; spotlight focus.</li>
-            <li><b>BIG IDEA :</b> Nature is dying quickly-urgent, sad.</li>
-            <li><b>TECHNIQUES :</b> Photorealism, blending, soft light.</li>
+            <li><b>Purpose:</b> Show desertification kills wildlife.</li>
+            <li><b>Audience:</b> Anyone who cares about the planet.</li>
+            <li><b>Style:</b> Elephant fades to dust, spotlight focus.</li>
+            <li><b>Big idea:</b> Nature is dying quickly, urgent, sad.</li>
+            <li><b>Techniques:</b> Photorealism, blending, soft light.</li>
           </ul>
         </div>
       </article>
 
       <!-- CARD 2 -->
-      <article class="card">
+      <article class="card reveal">
         <img src="assets/golfaxe.png" alt="Golfer swinging an axe" />
         <div class="card-text">
           <h3>Golfer with an Axe</h3>
           <ul>
-            <li><b>PURPOSE :</b> Critique forest loss from golf courses.</li>
-            <li><b>AUDIENCE :</b> Golfers & land developers.</li>
-            <li><b>STYLE :</b> Calm scene but weapon swap shocks us.</li>
-            <li><b>BIG IDEA :</b> Fun sports can hide real damage.</li>
-            <li><b>TECHNIQUES :</b> Juxtaposition, irony, bold contrast.</li>
+            <li><b>Purpose:</b> Critique forest loss from golf courses.</li>
+            <li><b>Audience:</b> Golfers and land developers.</li>
+            <li><b>Style:</b> Calm scene, weapon swap shocks us.</li>
+            <li><b>Big idea:</b> Fun sports can hide real damage.</li>
+            <li><b>Techniques:</b> Juxtaposition, irony, bold contrast.</li>
           </ul>
         </div>
       </article>
 
       <!-- CARD 3 -->
-      <article class="card">
+      <article class="card reveal">
         <img src="assets/girlnewspaper.png" alt="Girl wearing newspaper dress" />
         <div class="card-text">
           <h3>Winter Collection Girl</h3>
           <ul>
-            <li><b>PURPOSE :</b> Expose child poverty in a fashion style.</li>
-            <li><b>AUDIENCE :</b> Fashion industry & wider public.</li>
-            <li><b>STYLE :</b> Studio lighting, plain grey backdrop.</li>
-            <li><b>BIG IDEA :</b> Trendy ads ignore real suffering.</li>
-            <li><b>TECHNIQUES :</b> Irony, direct gaze, minimal design.</li>
+            <li><b>Purpose:</b> Expose child poverty in a fashion style.</li>
+            <li><b>Audience:</b> Fashion industry and wider public.</li>
+            <li><b>Style:</b> Studio lighting, plain grey backdrop.</li>
+            <li><b>Big idea:</b> Trendy ads ignore real suffering.</li>
+            <li><b>Techniques:</b> Irony, direct gaze, minimal design.</li>
           </ul>
         </div>
       </article>
 
       <!-- CARD 4 -->
-      <article class="card">
-        <img src="assets/weightwatchers.png" alt="WeightWatchers entrance/exit doors" />
+      <article class="card reveal">
+        <img src="assets/weightwatchers.png" alt="WeightWatchers entrance and exit doors" />
         <div class="card-text">
           <h3>Weight Watchers Doors</h3>
           <ul>
-            <li><b>PURPOSE :</b> Promote slimming service visually.</li>
-            <li><b>AUDIENCE :</b> Anyone wanting to lose weight.</li>
-            <li><b>STYLE :</b> Two doors; exit door slimmer.</li>
-            <li><b>BIG IDEA :</b> You’ll shrink after their program.</li>
-            <li><b>TECHNIQUES :</b> Visual pun, clean minimalism.</li>
+            <li><b>Purpose:</b> Promote slimming service visually.</li>
+            <li><b>Audience:</b> Anyone wanting to lose weight.</li>
+            <li><b>Style:</b> Two doors, exit door slimmer.</li>
+            <li><b>Big idea:</b> You will shrink after their program.</li>
+            <li><b>Techniques:</b> Visual pun, clean minimalism.</li>
           </ul>
         </div>
       </article>
 
       <!-- CARD 5 -->
-      <article class="card">
+      <article class="card reveal">
         <img src="assets/chupachups.png" alt="Chupa Chups ants ignore lollipop" />
         <div class="card-text">
           <h3>Chupa Chups Sugar-Free</h3>
           <ul>
-            <li><b>PURPOSE :</b> Show lollipop has zero sugar.</li>
-            <li><b>AUDIENCE :</b> Parents, kids, health-minded consumers.</li>
-            <li><b>STYLE :</b> Realistic photo; ants bypass sweet.</li>
-            <li><b>BIG IDEA :</b> Even ants don’t want it—no sugar!</li>
-            <li><b>TECHNIQUES :</b> Humor, symbolism, muted palette.</li>
+            <li><b>Purpose:</b> Show lollipop has zero sugar.</li>
+            <li><b>Audience:</b> Parents, kids, health minded buyers.</li>
+            <li><b>Style:</b> Realistic photo, ants bypass sweet.</li>
+            <li><b>Big idea:</b> Even ants do not want it, no sugar.</li>
+            <li><b>Techniques:</b> Humor, symbolism, muted palette.</li>
           </ul>
         </div>
       </article>
 
       <!-- CARD 6 -->
-      <article class="card">
+      <article class="card reveal">
         <img src="assets/glasses.png" alt="Glasses reveal clear painting detail" />
         <div class="card-text">
-          <h3>Glasses – See Clearly</h3>
+          <h3>Glasses, See Clearly</h3>
           <ul>
-            <li><b>PURPOSE :</b> Show glasses sharpen your world.</li>
-            <li><b>AUDIENCE :</b> People needing vision correction.</li>
-            <li><b>STYLE :</b> Painting turns realistic inside lens.</li>
-            <li><b>BIG IDEA :</b> Glasses reveal hidden detail.</li>
-            <li><b>TECHNIQUES :</b> Focus blur, surreal twist.</li>
+            <li><b>Purpose:</b> Show glasses sharpen your world.</li>
+            <li><b>Audience:</b> People needing vision help.</li>
+            <li><b>Style:</b> Painting turns realistic inside lens.</li>
+            <li><b>Big idea:</b> Glasses reveal hidden detail.</li>
+            <li><b>Techniques:</b> Focus blur, surreal twist.</li>
           </ul>
         </div>
       </article>
@@ -122,22 +140,289 @@
 
     <!-- ───────────  PAPER 2  ─────────── -->
     <section id="paper2" class="section">
-      <h2>Paper 2</h2>
-      <p>I’ll compare two prescribed books, looking at themes (power, love, justice), character arcs, stylistic choices and context. Key goal: balanced argument, strong quotes 📖</p>
+      <h2 class="reveal">Paper 2</h2>
+      <p class="reveal">
+        I will compare two prescribed books, looking at themes like power, love, and justice, plus character arcs, style, and context. Goal: a balanced argument with strong quotes.
+      </p>
     </section>
 
     <!-- ───────────  ORAL  ─────────── -->
     <section id="oral" class="section">
-      <h2>Individual Oral</h2>
-      <p>10-minute presentation + 5-minute Q&A.</p>
-      <ol>
-        <li>Select a global issue (e.g. inequality, freedom, climate).</li>
-        <li>Pick <b>1 literary</b> + <b>1 non-literary</b> text.</li>
-        <li>Analyse how each shows the issue (language, visuals, context).</li>
-        <li>Link both, conclude impact on audience.</li>
+      <h2 class="reveal">Individual Oral</h2>
+      <p class="reveal">10 minute presentation, 5 minute Q&amp;A.</p>
+      <ol class="reveal">
+        <li>Select a global issue, for example inequality, freedom, climate.</li>
+        <li>Pick <b>1 literary</b> and <b>1 non literary</b> text.</li>
+        <li>Analyse how each shows the issue, language, visuals, context.</li>
+        <li>Link both, end with the impact on the audience.</li>
       </ol>
     </section>
+
+    <!-- ───────────  TEXT SELECTION GUIDELINES  ─────────── -->
+    <section id="guidelines" class="section">
+      <h2 class="reveal">IBDP Language A HLSL: Text Selection Guidelines 2025-2027</h2>
+      <p class="meta reveal">Teacher: <b>Pauline Westwood</b></p>
+
+      <details class="tile reveal" open>
+        <summary>What counts as a "work"</summary>
+        <ul class="tight">
+          <li>1 single literary text, for example novel, autobiography, biography</li>
+          <li>2 or more short literary texts, for example novella</li>
+          <li>5-10 short stories</li>
+          <li>5-8 essays</li>
+          <li>10-15 letters</li>
+          <li>A long poem of over 600 lines or 15-20 poems</li>
+        </ul>
+        <p class="chips">
+          <span class="chip">Poetry</span>
+          <span class="chip">Drama</span>
+          <span class="chip">Prose, fiction</span>
+          <span class="chip">Prose, non fiction</span>
+        </p>
+      </details>
+
+      <details class="tile reveal">
+        <summary>PRL links</summary>
+        <p>
+          PRL is on MyIB → Programme Resource Centre → Diploma Program → Language and Literature → In Practice → Prescribed Reading List.
+        </p>
+        <p class="links">
+          <a href="https://ibo.my.site.com/ibportal/" target="_blank" rel="noopener">MyIB portal</a>
+          <a href="https://ibpublishing.ibo.org/prl/index.html" target="_blank" rel="noopener">Direct PRL site</a>
+        </p>
+      </details>
+    </section>
+
+    <!-- ───────────  SL PLAN  ─────────── -->
+    <section id="sl" class="section">
+      <h2 class="reveal">Standard Level, plan</h2>
+
+      <div class="grid two">
+        <div class="tile reveal">
+          <h3>Requirements</h3>
+          <ul class="tight">
+            <li>Pick at least <b>4</b> literary works</li>
+            <li>No repeat authors or texts across OFS courses</li>
+            <li>Cover at least two literary forms, periods, countries or regions, and two continents as defined in the PRL</li>
+            <li>One work per Area of Exploration</li>
+          </ul>
+        </div>
+
+        <div class="tile reveal">
+          <h3>AoE coverage</h3>
+          <p class="chips">
+            <span class="chip">Readers, writers, texts</span>
+            <span class="chip">Time and space</span>
+            <span class="chip">Intertextuality</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <h3>From the PRL, in English</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Romeo and Juliet</td>
+              <td>Renaissance drama</td>
+              <td>1597</td>
+              <td>UK</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>From the PRL, work in translation</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A Doll’s House</td>
+              <td>Modern drama</td>
+              <td>1870</td>
+              <td>Norway</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Our free choice</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A Streetcar Named Desire</td>
+              <td>Modern drama</td>
+              <td>1947</td>
+              <td>United States of America</td>
+              <td>North America</td>
+            </tr>
+            <tr>
+              <td>The Whitsun Weddings</td>
+              <td>Modern poetry</td>
+              <td>1964</td>
+              <td>UK</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Bodies of work, SL</h3>
+        <ol class="tight">
+          <li>The Political Art of Banksy</li>
+          <li>UK Government WW1 Propaganda Posters</li>
+          <li>Liza Donnelly’s Satirical Cartoons</li>
+          <li>Robert Capa’s Photographs</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────  HL PLAN  ─────────── -->
+    <section id="hl" class="section">
+      <h2 class="reveal">Higher Level, plan</h2>
+
+      <div class="grid two">
+        <div class="tile reveal">
+          <h3>Requirements</h3>
+          <ul class="tight">
+            <li>Pick at least <b>6</b> literary works</li>
+            <li>No repeat authors or texts across OFS courses</li>
+            <li>Cover at least three literary forms, three periods, three countries or regions, and two continents as defined in the PRL</li>
+            <li>Two works per Area of Exploration</li>
+          </ul>
+        </div>
+
+        <div class="tile reveal">
+          <h3>AoE coverage</h3>
+          <p class="chips">
+            <span class="chip">Readers, writers, texts</span>
+            <span class="chip">Time and space</span>
+            <span class="chip">Intertextuality</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <h3>From the PRL, in English</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Romeo and Juliet</td>
+              <td>Renaissance drama</td>
+              <td>1597</td>
+              <td>UK</td>
+              <td>Europe</td>
+            </tr>
+            <tr>
+              <td>The Smiths</td>
+              <td>Song lyrics</td>
+              <td>1980s</td>
+              <td>UK</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>From the PRL, work in translation</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A Doll’s House</td>
+              <td>Modern drama</td>
+              <td>1870</td>
+              <td>Norway</td>
+              <td>Europe</td>
+            </tr>
+            <tr>
+              <td>The Nest of Vipers</td>
+              <td>Modern novel</td>
+              <td>1932</td>
+              <td>France</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Our free choice</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A Streetcar Named Desire</td>
+              <td>Modern drama</td>
+              <td>1947</td>
+              <td>United States of America</td>
+              <td>North America</td>
+            </tr>
+            <tr>
+              <td>The Whitsun Weddings</td>
+              <td>Modern poetry</td>
+              <td>1964</td>
+              <td>UK</td>
+              <td>Europe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Bodies of work, HL</h3>
+        <ol class="tight">
+          <li>The Political Art of Banksy</li>
+          <li>U.K Government WW1 Propaganda Posters</li>
+          <li>Liza Donnelly’s Satirical Cartoons</li>
+          <li>Robert Capa’s Photographs</li>
+          <li>Ugur Gallenkus’s Digital Photography</li>
+          <li>Film, Life is Beautiful</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────  CHECKLIST  ─────────── -->
+    <section id="checklist" class="section">
+      <h2 class="reveal">Language and Literature SL / HL Course Design Checklist</h2>
+      <ul class="ticks reveal">
+        <li>Minimum 4 / 6 literary works and an equal number of non literary bodies of work</li>
+        <li>Minimum of 1 / 2 PRL works in the studied language</li>
+        <li>Minimum of 1 / 2 PRL works in translation</li>
+        <li>Minimum of 2 works free choice, may be in translation</li>
+        <li>Minimum of 1 / 2 works for each Area of Exploration</li>
+        <li>Cover 2 / 3 literary forms, 2 / 3 time periods, 2 / 3 countries or regions, at least 2 continents</li>
+        <li>Enough bodies of work to support the IO and the HL Essay</li>
+      </ul>
+      <p class="links reveal">
+        <a href="https://ibo.my.site.com/ibportal/" target="_blank" rel="noopener">MyIB portal</a>
+        <a href="https://ibpublishing.ibo.org/prl/index.html" target="_blank" rel="noopener">PRL site</a>
+      </p>
+    </section>
   </main>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
 
   <footer>© 2025 | Site by Anthony Mauclair | Code-based website</footer>
 
