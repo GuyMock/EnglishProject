@@ -101,3 +101,36 @@ nav a.active{outline:2px solid rgba(255,255,255,.5)}
 #toTop.show{opacity:1;transform:translateY(0)}
 
 footer{background:linear-gradient(180deg,var(--red-2),var(--red));color:#fff;text-align:center;padding:1.2rem;margin-top:2rem;font-weight:700;letter-spacing:.3px}
+
+.glossary-table td, .glossary-table th {
+  padding: .6rem .8rem;
+}
+.glossary-table th {
+  background: linear-gradient(180deg,#2a0f10,#220b0c);
+  color: #ffccd1;
+  font-weight: 800;
+}
+.glossary-table td {
+  color: var(--ink-2);
+  border-bottom: 1px solid #24252a;
+  vertical-align: top;
+}
+.glossary-table tbody tr:hover {
+  background: #1d1e23;
+}
+.glossary-table th:nth-child(1),
+.glossary-table td:nth-child(1) {
+  width: 18%;
+  font-weight: 700;
+  color: #fff;
+}
+.glossary-table th:nth-child(2),
+.glossary-table td:nth-child(2) {
+  width: 47%;
+}
+.glossary-table th:nth-child(3),
+.glossary-table td:nth-child(3) {
+  width: 35%;
+  color: #ffd9dd;
+  font-style: italic;
+}
