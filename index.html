@@ -3,138 +3,242 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Anthony Mauclair's DP English Portfolio</title>
+  <title>Anthony Mauclair — DP English Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div id="progress"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="progress" aria-hidden="true"></div>
+
   <header id="top">
     <div class="brand">
-      <div class="logo">AM</div>
+      <div class="logo" aria-label="Logo AM">AM</div>
       <div class="titles">
         <h1>My DP English Portfolio</h1>
-        <p class="sub">IBDP Language A • SL and HL • 2025–2027</p>
+        <p class="sub">IBDP Language A, 2025-2027</p>
       </div>
     </div>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#paper1">Paper 1</a>
-      <a href="#paper2">Paper 2</a>
-      <a href="#oral">Oral</a>
-      <a href="#guidelines">Text Selection</a>
-      <a href="#sl">SL Plan</a>
-      <a href="#hl">HL Plan</a>
-      <a href="#glossary">Glossary</a>
-      <a href="#checklist">Checklist</a>
+    <nav aria-label="Primary">
+      <button id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+      <div id="navMenu" class="nav-menu">
+        <a href="#hero">Home</a>
+        <a href="#paper1">Paper 1</a>
+        <a href="#poster">Poster Plan</a>
+        <a href="#liza">Liza Donnelly</a>
+        <a href="#paper2">Paper 2</a>
+        <a href="#oral">IO Plan</a>
+        <a href="#guidelines">Text Selection</a>
+        <a href="#sl">SL Plan</a>
+        <a href="#hl">HL Plan</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#notes">Notes</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section id="hero" class="section hero">
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="section hero" tabindex="-1">
       <div class="hero-wrap">
-        <h2 class="xl reveal">IB English, one clean hub</h2>
-        <p class="lead reveal">All tasks in one place with fast navigation, clear plans, and polished visuals. Red theme, smooth motion, zero clutter.</p>
+        <h2 class="xl reveal">IB English, one clear hub</h2>
+        <p class="lead reveal">All tasks in one place with fast navigation, clean plans, and simple visuals. Red theme, smooth motion, no clutter.</p>
         <div class="cta reveal">
-          <a class="btn" href="#guidelines">Text Selection</a>
-          <a class="btn ghost" href="#sl">SL Plan</a>
-          <a class="btn ghost" href="#hl">HL Plan</a>
+          <a class="btn" href="#poster">Poster Plan</a>
+          <a class="btn ghost" href="#oral">IO Plan</a>
+          <a class="btn ghost" href="#checklist">Checklist</a>
         </div>
       </div>
-      <div class="hero-orb orb1"></div>
-      <div class="hero-orb orb2"></div>
-      <div class="hero-orb orb3"></div>
+      <div class="hero-orb orb1" aria-hidden="true"></div>
+      <div class="hero-orb orb2" aria-hidden="true"></div>
+      <div class="hero-orb orb3" aria-hidden="true"></div>
     </section>
 
+    <!-- PAPER 1 CARDS -->
     <section id="paper1" class="section">
-      <h2 class="reveal">Paper 1 • Visual Texts</h2>
-      <p class="reveal">Focus on purpose, audience, visual language, and how design choices shape meaning. Cards reveal as you scroll. Hover for tilt.</p>
-      <div class="cards">
+      <h2 class="reveal under">Paper 1 — Visual Texts</h2>
+      <p class="reveal">Focus on purpose, audience, visual language, and how design choices shape meaning. Cards reveal as you scroll. Hover or tap for tilt.</p>
+      <div class="cards" aria-live="polite">
         <article class="card reveal tilt">
           <img src="assets/elephant.png" alt="Elephant turning into sand">
           <div class="card-text">
-            <h3>Elephant Turning into Sand</h3>
+            <h3>Elephant turning into sand</h3>
             <ul>
               <li><b>Purpose:</b> Desertification harms wildlife</li>
               <li><b>Audience:</b> Environment conscious viewers</li>
               <li><b>Style:</b> Fade to dust, spotlight subject</li>
               <li><b>Big idea:</b> Urgency and loss</li>
-              <li><b>Techniques:</b> Photorealism, blending, soft light</li>
+              <li><b>Methods:</b> Photorealism, blending, soft light</li>
             </ul>
           </div>
         </article>
         <article class="card reveal tilt">
           <img src="assets/golfaxe.png" alt="Golfer swinging an axe">
           <div class="card-text">
-            <h3>Golfer with an Axe</h3>
+            <h3>Golfer with an axe</h3>
             <ul>
               <li><b>Purpose:</b> Critique deforestation for leisure</li>
               <li><b>Audience:</b> Golfers, developers</li>
               <li><b>Style:</b> Calm scene with a jarring swap</li>
               <li><b>Big idea:</b> Hidden costs of fun</li>
-              <li><b>Techniques:</b> Irony, juxtaposition, contrast</li>
+              <li><b>Methods:</b> Irony, juxtaposition, contrast</li>
             </ul>
           </div>
         </article>
         <article class="card reveal tilt">
-          <img src="assets/girlnewspaper.png" alt="Girl wearing newspaper dress">
+          <img src="assets/girlnewspaper.png" alt="Girl wearing a dress made of newspaper">
           <div class="card-text">
-            <h3>Winter Collection Girl</h3>
+            <h3>Winter collection girl</h3>
             <ul>
-              <li><b>Purpose:</b> Expose child poverty through fashion codes</li>
+              <li><b>Purpose:</b> Expose child poverty with fashion codes</li>
               <li><b>Audience:</b> Fashion industry and public</li>
               <li><b>Style:</b> Studio minimalism</li>
-              <li><b>Big idea:</b> Trend masks suffering</li>
-              <li><b>Techniques:</b> Irony, direct gaze, restraint</li>
+              <li><b>Big idea:</b> Trend can mask suffering</li>
+              <li><b>Methods:</b> Irony, direct gaze, restraint</li>
             </ul>
           </div>
         </article>
         <article class="card reveal tilt">
-          <img src="assets/weightwatchers.png" alt="WeightWatchers doors">
+          <img src="assets/weightwatchers.png" alt="Narrow and wide doors at WeightWatchers">
           <div class="card-text">
-            <h3>Weight Watchers Doors</h3>
+            <h3>WeightWatchers doors</h3>
             <ul>
               <li><b>Purpose:</b> Visualize slimming result</li>
               <li><b>Audience:</b> Weight loss seekers</li>
               <li><b>Style:</b> Clean architectural pun</li>
               <li><b>Big idea:</b> Before and after in one frame</li>
-              <li><b>Techniques:</b> Minimalism, proportion play</li>
+              <li><b>Methods:</b> Minimalism, proportion play</li>
             </ul>
           </div>
         </article>
         <article class="card reveal tilt">
-          <img src="assets/chupachups.png" alt="Ants ignore lollipop">
+          <img src="assets/chupachups.png" alt="Ants ignore a lollipop">
           <div class="card-text">
-            <h3>Chupa Chups Sugar-Free</h3>
+            <h3>Chupa Chups sugar free</h3>
             <ul>
               <li><b>Purpose:</b> Signal zero sugar</li>
-              <li><b>Audience:</b> Parents, kids, health minded</li>
+              <li><b>Audience:</b> Parents and kids</li>
               <li><b>Style:</b> Realism with a twist</li>
               <li><b>Big idea:</b> Even ants pass by</li>
-              <li><b>Techniques:</b> Humor, symbolism, muted palette</li>
+              <li><b>Methods:</b> Humor, symbolism, muted palette</li>
             </ul>
           </div>
         </article>
         <article class="card reveal tilt">
-          <img src="assets/glasses.png" alt="Glasses reveal detail">
+          <img src="assets/glasses.png" alt="Glasses frame revealing clear detail">
           <div class="card-text">
-            <h3>Glasses, See Clearly</h3>
+            <h3>Glasses, see clearly</h3>
             <ul>
               <li><b>Purpose:</b> Clarity sells the product</li>
-              <li><b>Audience:</b> People needing vision help</li>
+              <li><b>Audience:</b> Anyone needing vision help</li>
               <li><b>Style:</b> Real detail inside lens</li>
               <li><b>Big idea:</b> Hidden detail unlocked</li>
-              <li><b>Techniques:</b> Depth of field, focal contrast</li>
+              <li><b>Methods:</b> Depth of field, focal contrast</li>
             </ul>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- POSTER PLAN -->
+    <section id="poster" class="section alt">
+      <h2 class="reveal under">Poster Plan, due Friday</h2>
+      <div class="grid two">
+        <div class="tile reveal">
+          <h3>Intro checklist</h3>
+          <ol class="tight">
+            <li>Text type, date, source</li>
+            <li>Content in one line</li>
+            <li>Writer or brand</li>
+            <li>Context, where seen, why now</li>
+            <li>Tone words</li>
+            <li>Purpose, inform or persuade or call to action</li>
+            <li>Audience, who and why</li>
+            <li>Message, the core claim</li>
+          </ol>
+        </div>
+        <div class="tile reveal">
+          <h3>PEEL body plan</h3>
+          <ol class="tight">
+            <li><b>Point</b>, the main visual draw</li>
+            <li><b>Example</b>, what you see, precise</li>
+            <li><b>Explanation</b>, method and effect</li>
+            <li><b>Link</b>, back to purpose or audience</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <h3>What to cover fast</h3>
+        <ul class="tight">
+          <li>Dominant element, what hits the eye first</li>
+          <li>Colour choice, fit to mood and brand</li>
+          <li>Gaze and focus, who looks at whom</li>
+          <li>Contrast, text vs background, figure vs ground</li>
+          <li>Side details, ambience, do not over read</li>
+          <li>Symbolism, clear, not far fetched</li>
+          <li>Typography, font, size, weight, alignment, spacing</li>
+          <li>Micro effects, punctuation can slow the reader</li>
+        </ul>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Mini template</h3>
+        <p><b>Guiding question:</b> How do visual choices lead the viewer to the message?</p>
+        <p><b>Thesis:</b> The poster guides attention with the dominant element, builds tone with colour and contrast, and closes with clean type and a clear call to action for the target audience.</p>
+      </div>
+    </section>
+
+    <!-- LIZA DONNELLY CASE STUDY -->
+    <section id="liza" class="section">
+      <h2 class="reveal under">Case study, Liza Donnelly — humor for change</h2>
+      <div class="grid two">
+        <div class="tile reveal">
+          <h3>Core ideas</h3>
+          <ul class="tight">
+            <li>Gender expectations, fear of womanhood, pressure to conform</li>
+            <li>Imperatives in culture, "Eat this, wear this, do this, buy this, want this"</li>
+            <li>Media saturation, images that teach roles early</li>
+            <li>Home as first imprint, colour coding like pink as a signal</li>
+            <li>Drawing as voice, approval without speaking</li>
+            <li>Reversal captions, subvert common sayings for effect</li>
+            <li>One laugh at a time, small shifts add up</li>
+          </ul>
+        </div>
+        <div class="tile reveal">
+          <h3>Methods and effects</h3>
+          <ul class="tight">
+            <li><b>Juxtaposition:</b> Exaggerated character beside plain crowd, shows what stands out</li>
+            <li><b>Hyperbole:</b> Big hair or big bag as pressure made visible</li>
+            <li><b>Irony:</b> "I want to look like X, but not seem like X", image vs identity</li>
+            <li><b>Intertext:</b> Public figures used as mirrors for trends</li>
+            <li><b>Register shifts:</b> Demotic captions for direct connection</li>
+            <li><b>Visual contrast:</b> Dark lines on pale ground, fast read, strong focus</li>
+            <li><b>Punchline timing:</b> Short line after a setup image, surprise drives the point</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Clean PEEL, ready to paste</h3>
+        <p><b>Point:</b> Donnelly uses irony to expose how culture scripts girls before they can choose.</p>
+        <p><b>Example:</b> A child echoes adult commands, "Eat this, wear this, do this, buy this, want this", while a pink room signals a preset role.</p>
+        <p><b>Explanation:</b> The imperatives and colour code work together. The list sounds like marketing, the pink palette codes gender. The reader sees how early and how often the script is taught.</p>
+        <p><b>Link:</b> By making us laugh and notice the script, the cartoon nudges change, one laugh at a time.</p>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Safety on tone</h3>
+        <p>Do not label subjects with insults. Describe what the image does. If a caption uses casual or harsh language, name the register and the effect on the reader. Keep analysis neutral, precise, and kind.</p>
+      </div>
+    </section>
+
+    <!-- PAPER 2 -->
     <section id="paper2" class="section alt">
-      <h2 class="reveal">Paper 2 • Literary Comparison</h2>
-      <p class="reveal">Compare prescribed works with attention to theme, character arcs, structure, voice, and context. Build a balanced line of argument with precise quotations and focused analysis.</p>
-      <div class="pill-grid reveal">
+      <h2 class="reveal under">Paper 2 — Literary Comparison</h2>
+      <p class="reveal">Compare works with focus on theme, method, structure, voice, and context. Use precise quotes and keep the line of argument tight.</p>
+      <div class="pill-grid reveal" aria-hidden="true">
         <span class="pill">Theme mapping</span>
         <span class="pill">Narrative method</span>
         <span class="pill">Voice and tone</span>
@@ -144,61 +248,88 @@
       </div>
     </section>
 
+    <!-- IO PLAN -->
     <section id="oral" class="section">
-      <h2 class="reveal">Individual Oral</h2>
+      <h2 class="reveal under">IO Plan — global issue, desire for human connection</h2>
+
       <div class="io-grid">
+        <div class="io-tile reveal">
+          <h3>Texts</h3>
+          <ul class="tight">
+            <li><b>Literary:</b> The Smiths, "There Is a Light That Never Goes Out"</li>
+            <li><b>Pair for practice:</b> A Banksy piece on solitude vs crowd</li>
+          </ul>
+          <p class="muted">For the real IO, pair one literary with one non literary. Keep one short quote per text.</p>
+        </div>
+
         <div class="io-tile reveal">
           <h3>Flow</h3>
           <ol>
-            <li>Choose a global issue</li>
-            <li>Select one literary and one non-literary text</li>
-            <li>Analyze how each constructs the issue</li>
-            <li>Synthesize, conclude audience impact</li>
+            <li>Hook, text type, writer, context, audience</li>
+            <li>Guiding question and thesis</li>
+            <li>Verse 1, zoom in</li>
+            <li>Chorus, shift in tone</li>
+            <li>Outro, final mood</li>
+            <li>Whole work and impact</li>
           </ol>
         </div>
+
         <div class="io-tile reveal">
-          <h3>Timing</h3>
-          <ul>
-            <li>10 minutes presentation</li>
-            <li>5 minutes Q&A</li>
+          <h3>Thesis</h3>
+          <p>The song turns risk into a tender wish to show how far isolation can push the need to belong. It uses a confessional voice, night drive imagery, anaphora, and a light motif that suggests safety.</p>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="tile reveal">
+          <h3>Verse 1</h3>
+          <ul class="tight">
+            <li><b>Method:</b> Anaphora of "take me out" builds urgency</li>
+            <li><b>Voice:</b> First person confession adds intimacy</li>
+            <li><b>Effect:</b> The speaker seeks escape and witness</li>
           </ul>
         </div>
-        <div class="io-tile reveal">
-          <h3>Checklist</h3>
-          <ul>
-            <li>Clear guiding question</li>
-            <li>Methods and effects named</li>
-            <li>Specific evidence</li>
-            <li>Cohesive structure</li>
+        <div class="tile reveal">
+          <h3>Chorus</h3>
+          <ul class="tight">
+            <li><b>Image:</b> Night drive, empty streets, borrowed freedom</li>
+            <li><b>Symbol:</b> Light as acceptance, not just sight</li>
+            <li><b>Effect:</b> Desire reframed as calm inevitability</li>
           </ul>
         </div>
       </div>
+
+      <div class="tile reveal">
+        <h3>Key evidence</h3>
+        <blockquote>"And if a double decker bus crashes into us, to die by your side is such a heavenly way to die."</blockquote>
+        <p><b>Method:</b> Hyperbole, irony, romantic fatalism. <b>Effect:</b> Danger turned into union. <b>Link:</b> Connection outweighs fear.</p>
+      </div>
     </section>
 
+    <!-- TEXT SELECTION -->
     <section id="guidelines" class="section alt">
-      <h2 class="reveal">Text Selection Guidelines 2025–2027</h2>
-      <p class="reveal teacher">Teacher: Pauline Westwood</p>
+      <h2 class="reveal under">Text selection — quick rules</h2>
       <div class="grid two">
         <div class="tile reveal">
           <h3>What counts as a work</h3>
           <ul class="tight">
-            <li>1 single literary text such as a novel, autobiography, or biography</li>
-            <li>2 or more short literary texts such as a novella</li>
-            <li>5–10 short stories</li>
-            <li>5–8 essays</li>
-            <li>10–15 letters</li>
-            <li>A long poem over 600 lines or 15–20 poems</li>
+            <li>Single text, novel or life writing or biography</li>
+            <li>2 or more shorter texts, novella or linked pieces</li>
+            <li>5-10 short stories</li>
+            <li>5-8 essays</li>
+            <li>10-15 letters</li>
+            <li>Long poem 600+ lines or 15-20 poems</li>
           </ul>
           <p class="chips">
             <span class="chip">Poetry</span>
             <span class="chip">Drama</span>
-            <span class="chip">Prose: fiction</span>
-            <span class="chip">Prose: non-fiction</span>
+            <span class="chip">Prose</span>
+            <span class="chip">Non fiction</span>
           </p>
         </div>
         <div class="tile reveal">
-          <h3>PRL Access</h3>
-          <p>Use the Prescribed Reading List on MyIB or the PRL site. Ensure coverage across forms, periods, regions, and continents as required.</p>
+          <h3>PRL access</h3>
+          <p>Use the PRL on MyIB. Cover forms, periods, regions, and continents as needed.</p>
           <div class="links">
             <a href="https://ibo.my.site.com/ibportal/" target="_blank" rel="noopener">MyIB</a>
             <a href="https://ibpublishing.ibo.org/prl/index.html" target="_blank" rel="noopener">PRL</a>
@@ -207,20 +338,21 @@
       </div>
     </section>
 
+    <!-- SL PLAN -->
     <section id="sl" class="section">
-      <h2 class="reveal">Standard Level Plan</h2>
+      <h2 class="reveal under">Standard Level Plan</h2>
       <div class="grid two">
         <div class="tile reveal">
           <h3>Requirements</h3>
           <ul class="tight">
-            <li>Minimum 4 literary works</li>
-            <li>No repeated authors or texts across OFS courses</li>
-            <li>Cover at least two literary forms, two periods, two regions, and two continents per PRL</li>
+            <li>4 works minimum</li>
+            <li>No repeated authors across courses</li>
+            <li>Cover 2 forms, 2 periods, 2 regions, 2 continents</li>
             <li>One work per Area of Exploration</li>
           </ul>
         </div>
         <div class="tile reveal">
-          <h3>Areas of Exploration</h3>
+          <h3>Areas of exploration</h3>
           <p class="chips">
             <span class="chip">Readers, writers, texts</span>
             <span class="chip">Time and space</span>
@@ -234,59 +366,60 @@
           <thead>
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
-          <tbody>
-            <tr><td>Romeo and Juliet</td><td>Renaissance drama</td><td>1597</td><td>UK</td><td>Europe</td></tr>
-          </tbody>
+        <tbody>
+            <tr><td>Romeo and Juliet</td><td>Drama</td><td>1597</td><td>UK</td><td>Europe</td></tr>
+        </tbody>
         </table>
       </div>
       <div class="tile reveal">
-        <h3>From the PRL, work in translation</h3>
+        <h3>From the PRL, in translation</h3>
         <table class="table">
           <thead>
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
           <tbody>
-            <tr><td>A Doll’s House</td><td>Modern drama</td><td>1870</td><td>Norway</td><td>Europe</td></tr>
+            <tr><td>A Doll's House</td><td>Drama</td><td>1879</td><td>Norway</td><td>Europe</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tile reveal">
-        <h3>Our free choice</h3>
+        <h3>Free choice</h3>
         <table class="table">
           <thead>
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
           <tbody>
-            <tr><td>A Streetcar Named Desire</td><td>Modern drama</td><td>1947</td><td>United States of America</td><td>North America</td></tr>
-            <tr><td>The Whitsun Weddings</td><td>Modern poetry</td><td>1964</td><td>UK</td><td>Europe</td></tr>
+            <tr><td>A Streetcar Named Desire</td><td>Drama</td><td>1947</td><td>USA</td><td>North America</td></tr>
+            <tr><td>The Whitsun Weddings</td><td>Poetry</td><td>1964</td><td>UK</td><td>Europe</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tile reveal">
         <h3>Bodies of work</h3>
         <ol class="tight">
-          <li>The Political Art of Banksy</li>
-          <li>UK Government WW1 Propaganda Posters</li>
-          <li>Liza Donnelly’s Satirical Cartoons</li>
-          <li>Robert Capa’s Photographs</li>
+          <li>The political art of Banksy</li>
+          <li>UK WWI propaganda posters</li>
+          <li>Liza Donnelly cartoons</li>
+          <li>Robert Capa photographs</li>
         </ol>
       </div>
     </section>
 
+    <!-- HL PLAN -->
     <section id="hl" class="section alt">
-      <h2 class="reveal">Higher Level Plan</h2>
+      <h2 class="reveal under">Higher Level Plan</h2>
       <div class="grid two">
         <div class="tile reveal">
           <h3>Requirements</h3>
           <ul class="tight">
-            <li>Minimum 6 literary works</li>
-            <li>No repeated authors or texts across OFS courses</li>
-            <li>Cover at least three literary forms, three periods, three regions, and two continents per PRL</li>
+            <li>6 works minimum</li>
+            <li>No repeated authors across courses</li>
+            <li>Cover 3 forms, 3 periods, 3 regions, 2 continents</li>
             <li>Two works per Area of Exploration</li>
           </ul>
         </div>
         <div class="tile reveal">
-          <h3>Areas of Exploration</h3>
+          <h3>Areas of exploration</h3>
           <p class="chips">
             <span class="chip">Readers, writers, texts</span>
             <span class="chip">Time and space</span>
@@ -301,146 +434,119 @@
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
           <tbody>
-            <tr><td>Romeo and Juliet</td><td>Renaissance drama</td><td>1597</td><td>UK</td><td>Europe</td></tr>
+            <tr><td>Romeo and Juliet</td><td>Drama</td><td>1597</td><td>UK</td><td>Europe</td></tr>
             <tr><td>The Smiths</td><td>Song lyrics</td><td>1980s</td><td>UK</td><td>Europe</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tile reveal">
-        <h3>From the PRL, work in translation</h3>
+        <h3>From the PRL, in translation</h3>
         <table class="table">
           <thead>
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
           <tbody>
-            <tr><td>A Doll’s House</td><td>Modern drama</td><td>1870</td><td>Norway</td><td>Europe</td></tr>
-            <tr><td>The Nest of Vipers</td><td>Modern novel</td><td>1932</td><td>France</td><td>Europe</td></tr>
+            <tr><td>A Doll's House</td><td>Drama</td><td>1879</td><td>Norway</td><td>Europe</td></tr>
+            <tr><td>Nest of Vipers</td><td>Novel</td><td>1932</td><td>France</td><td>Europe</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tile reveal">
-        <h3>Our free choice</h3>
+        <h3>Free choice</h3>
         <table class="table">
           <thead>
             <tr><th>Title</th><th>Form</th><th>Period</th><th>Country</th><th>Continent</th></tr>
           </thead>
           <tbody>
-            <tr><td>A Streetcar Named Desire</td><td>Modern drama</td><td>1947</td><td>United States of America</td><td>North America</td></tr>
-            <tr><td>The Whitsun Weddings</td><td>Modern poetry</td><td>1964</td><td>UK</td><td>Europe</td></tr>
+            <tr><td>A Streetcar Named Desire</td><td>Drama</td><td>1947</td><td>USA</td><td>North America</td></tr>
+            <tr><td>The Whitsun Weddings</td><td>Poetry</td><td>1964</td><td>UK</td><td>Europe</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tile reveal">
         <h3>Bodies of work</h3>
         <ol class="tight">
-          <li>The Political Art of Banksy</li>
-          <li>U.K Government WW1 Propaganda Posters</li>
-          <li>Liza Donnelly’s Satirical Cartoons</li>
-          <li>Robert Capa’s Photographs</li>
-          <li>Ugur Gallenkus’s Digital Photography</li>
-          <li>Film: Life is Beautiful</li>
+          <li>The political art of Banksy</li>
+          <li>UK WWI propaganda posters</li>
+          <li>Liza Donnelly cartoons</li>
+          <li>Robert Capa photographs</li>
+          <li>Ugur Gallenkuş composites</li>
+          <li>Film, Life is Beautiful</li>
         </ol>
       </div>
     </section>
 
+    <!-- GLOSSARY -->
     <section id="glossary" class="section">
-      <h2 class="reveal">Glossary</h2>
-      <p class="reveal">Key terms with definitions for quick reference. Add more words whenever needed.</p>
+      <h2 class="reveal under">Glossary</h2>
+      <p class="reveal">Key terms for fast reference. Add more as needed.</p>
       <table class="table glossary-table">
         <thead>
-          <tr><th>Word</th><th>Meaning</th></tr>
+          <tr><th>Word</th><th>Meaning</th><th>Example</th></tr>
         </thead>
         <tbody>
-          <tr><td>Allegory</td><td>A story, image, or text that can be interpreted to reveal a hidden meaning, often moral or political.</td><td>George Orwell’s "Animal Farm" as an allegory for the Russian Revolution.</td></tr>
-          <tr><td>Alliteration</td><td>Repetition of initial consonant sounds.</td><td>"Peter Piper picked a peck of pickled peppers."</td></tr>
-          <tr><td>Allusion</td><td>Indirect reference to another text, person, or event.</td><td>"He’s a real Romeo with the ladies."</td></tr>
-          <tr><td>Anaphora</td><td>Repetition of a word or phrase at the start of successive clauses.</td><td>"I have a dream… I have a dream…"</td></tr>
-          <tr><td>Anecdote</td><td>A short, personal story used to illustrate a point.</td><td>A teacher telling a story about failing a test to encourage students.</td></tr>
-          <tr><td>Antithesis</td><td>Contrasting ideas placed together.</td><td>"It was the best of times, it was the worst of times."</td></tr>
-          <tr><td>Archetype</td><td>A universal symbol or character type.</td><td>The "hero’s journey" in myths and movies.</td></tr>
-          <tr><td>Assonance</td><td>Repetition of vowel sounds.</td><td>"Hear the mellow wedding bells."</td></tr>
-          <tr><td>Colloquialism</td><td>Informal or conversational language.</td><td>"What’s up?" instead of "How are you?"</td></tr>
-          <tr><td>Connotation</td><td>The associations or feelings a word carries.</td><td>"Home" suggests warmth and comfort beyond its literal meaning.</td></tr>
-          <tr><td>Denotation</td><td>The literal dictionary definition of a word.</td><td>"Snake" meaning a reptile.</td></tr>
-          <tr><td>Diction</td><td>The author’s choice of words.</td><td>Formal diction: "The gentleman spoke with dignity."</td></tr>
-          <tr><td>Ellipsis</td><td>Three dots (…) indicating omission or pause.</td><td>"So… what now?"</td></tr>
-          <tr><td>Epistrophe</td><td>Repetition of words at the end of successive clauses.</td><td>"See no evil, hear no evil, speak no evil."</td></tr>
-          <tr><td>Ethos</td><td>Appeal to credibility or character.</td><td>A doctor endorsing a medical product.</td></tr>
-          <tr><td>Pathos</td><td>Appeal to emotion.</td><td>A charity ad showing images of suffering children.</td></tr>
-          <tr><td>Logos</td><td>Appeal to logic or reason.</td><td>Using statistics to support an argument.</td></tr>
-          <tr><td>Figurative Language</td><td>Language that is not literal.</td><td>"The classroom was a zoo."</td></tr>
-          <tr><td>Hyperbole</td><td>Deliberate exaggeration.</td><td>"I’ve told you a million times."</td></tr>
-          <tr><td>Imagery</td><td>Descriptive language appealing to the senses.</td><td>"The golden sunset spilled across the horizon."</td></tr>
-          <tr><td>Irony</td><td>A contrast between expectation and reality.</td><td>A fire station burns down.</td></tr>
-          <tr><td>Juxtaposition</td><td>Placing two ideas/images close together for contrast.</td><td>A wealthy mansion next to a slum.</td></tr>
-          <tr><td>Metaphor</td><td>Comparison without using "like" or "as".</td><td>"Time is a thief."</td></tr>
-          <tr><td>Simile</td><td>Comparison using "like" or "as".</td><td>"Her smile was as bright as the sun."</td></tr>
-          <tr><td>Motif</td><td>A recurring element or symbol in a text.</td><td>Darkness recurring in "Macbeth".</td></tr>
-          <tr><td>Onomatopoeia/Onomatopeic</td><td>Words that imitate sounds.</td><td>"Bang," "buzz," "splash."</td></tr>
-          <tr><td>Oxymoron</td><td>Two contradictory terms combined.</td><td>"Deafening silence."</td></tr>
-          <tr><td>Paradox</td><td>A statement that seems contradictory but reveals truth.</td><td>"Less is more."</td></tr>
-          <tr><td>Parallelism</td><td>Grammatical repetition for rhythm or balance.</td><td>"Easy come, easy go."</td></tr>
-          <tr><td>Parody</td><td>Imitation with exaggeration for comic effect.</td><td>"Scary Movie" parodying horror films.</td></tr>
-          <tr><td>Personification</td><td>Giving human qualities to non-human things.</td><td>"The wind whispered through the trees."</td></tr>
-          <tr><td>Polysyndeton</td><td>Repetition of conjunctions.</td><td>"We ate and laughed and sang and danced."</td></tr>
-          <tr><td>Asyndeton</td><td>Omission of conjunctions.</td><td>"I came, I saw, I conquered."</td></tr>
-          <tr><td>Prolepsis</td><td>Foreshadowing or anticipation of future events.</td><td>"He was a dead man walking."</td></tr>
-          <tr><td>Rhetorical Question</td><td>A question asked for effect, not an answer.</td><td>"Who cares?"</td></tr>
-          <tr><td>Satire</td><td>Humor, irony, or exaggeration to criticize.</td><td>"Animal Farm" satirizing politics.</td></tr>
-          <tr><td>Syntax</td><td>The arrangement of words and phrases.</td><td>Yoda: "Powerful you have become."</td></tr>
-          <tr><td>Register</td><td>The level of formality in language.</td><td>Formal register in a courtroom vs. casual register with friends.</td></tr>
-          <tr><td>Tone</td><td>The writer’s attitude toward the subject.</td><td>Sarcastic, hopeful, melancholic.</td></tr>
-          <tr><td>Voice</td><td>The personality or style of the speaker/writer.</td><td>Hemingway’s sparse voice vs. Faulkner’s elaborate one.</td></tr>
-
-          <tr><td>Declarative Sentence</td><td>Makes a statement.</td><td>"The sky is blue."</td></tr>
-          <tr><td>Interrogative Sentence</td><td>Asks a question.</td><td>"Is the sky blue?"</td></tr>
-          <tr><td>Imperative Sentence</td><td>Gives a command.</td><td>"Look at the sky."</td></tr>
-          <tr><td>Exclamatory Sentence</td><td>Expresses strong emotion.</td><td>"What a beautiful sky!"</td></tr>
-
-          <tr><td>Standard English (SE)</td><td>Formal, grammatically correct English used in education and media.</td><td>"I am going to the store."</td></tr>
-          <tr><td>Received Pronunciation (RP)</td><td>The accent traditionally considered "standard" British English.</td><td>Queen’s English.</td></tr>
-          <tr><td>Idiolect</td><td>An individual’s unique way of speaking.</td><td>Shakespeare’s personal style of wordplay.</td></tr>
-          <tr><td>Sociolect</td><td>Language style associated with a social group.</td><td>Teen slang: "That’s lit!"</td></tr>
-          <tr><td>Dialect</td><td>A regional form of language.</td><td>Scottish English: "wee" for "small."</td></tr>
-          <tr><td>Code-Switching</td><td>Shifting between languages/registers depending on context.</td><td>A bilingual speaker moving between Spanish and English mid-sentence.</td></tr>
-
-          <tr><td>Consonance</td><td>Repetition of consonant sounds within words.</td><td>"Pitter-patter."</td></tr>
-          <tr><td>Rhyme</td><td>Repetition of similar sounds at the ends of words.</td><td>"Cat" / "hat".</td></tr>
-          <tr><td>Rhythm</td><td>The pattern of stressed and unstressed syllables.</td><td>"Shall I compare thee to a summer’s day?"</td></tr>
-          <tr><td>Meter</td><td>Structured rhythmic pattern in poetry.</td><td>Iambic pentameter: "Shall I comPARE thee TO a SUMmer’s DAY?"</td></tr>
-          <tr><td>Caesura</td><td>A pause in the middle of a line of poetry.</td><td>"To be, or not to be — that is the question."</td></tr>
-          <tr><td>Enjambment</td><td>Sentence continues across lines of poetry.</td><td>"The sun rises / over the hill."</td></tr>
-          <tr><td>Free Verse</td><td>Poetry without a set rhyme or rhythm.</td><td>Walt Whitman’s "Leaves of Grass."</td></tr>
-          <tr><td>Symbolism</td><td>When an object, character, or event represents a larger idea.</td><td>A dove symbolizing peace.</td></tr>
-          <tr><td>Theme</td><td>The central idea or underlying message of a text.</td><td>Love and fate in "Romeo and Juliet".</td></tr>
-          <tr><td>Thesis Statement</td><td>The main argument or claim of an essay.</td><td>"Technology improves human life despite its risks."</td></tr>
-          <tr><td>Concluding Sentence</td><td>A sentence that wraps up a paragraph or argument.</td><td>"Therefore, the evidence shows that climate change is human-driven."</td></tr>
-          <tr><td>Tabloids</td><td>Newspapers that focus on sensational stories and celebrity news.</td><td>"A tabloid headline: 'Shocking Secret Revealed About Celebrity!'"</td></tr>
-          <tr><td>Broadsheets</td><td>Newspapers that focus on serious reporting and detailed analysis.</td><td>"A broadsheet headline: 'Government Introduces New Climate Policy to Cut Emissions by 2030.'"</td></tr>
+          <tr><td>Register</td><td>Level of formality in language</td><td>Courtroom vs chat with friends</td></tr>
+          <tr><td>Demotic language</td><td>Everyday speech, may include slang or expletives</td><td>Describe the register, do not endorse it</td></tr>
+          <tr><td>Anaphora</td><td>Repetition at the start of lines or clauses</td><td>Take me out... Take me out...</td></tr>
+          <tr><td>Motif</td><td>Recurring element or image</td><td>Light as safety in a song</td></tr>
+          <tr><td>PEEL</td><td>Point, Example, Explanation, Link</td><td>Use for clean paragraph logic</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="checklist" class="section">
-      <h2 class="reveal">Course Design Checklist</h2>
+    <!-- CHECKLIST -->
+    <section id="checklist" class="section alt">
+      <h2 class="reveal under">Assessment checklist</h2>
       <ul class="ticks reveal">
-        <li>Minimum 4 SL works or 6 HL works and matching number of bodies of work</li>
-        <li>At least 1 SL or 2 HL works from PRL in the studied language</li>
-        <li>At least 1 SL or 2 HL works in translation from PRL</li>
-        <li>At least 2 free choice works allowed, may be in translation</li>
-        <li>At least 1 SL or 2 HL works per Area of Exploration</li>
-        <li>Cover 2 SL or 3 HL literary forms, periods, and regions; at least 2 continents</li>
-        <li>Enough bodies of work to support IO and HL Essay</li>
+        <li>Surname only in academic work</li>
+        <li>State text type in the first line</li>
+        <li>Quote once per text in the IO</li>
+        <li>Use PEE or PEEL for each body paragraph</li>
+        <li>Annotate first, plan, then write</li>
+        <li>No slang, no cliches</li>
+        <li>Vary punctuation, aim for nine marks across the piece</li>
+        <li>End with a clear final line that answers the question</li>
+        <li>Name methods and effects, then audience impact</li>
       </ul>
-      <div class="links reveal">
-        <a href="https://ibo.my.site.com/ibportal/" target="_blank" rel="noopener">MyIB</a>
-        <a href="https://ibpublishing.ibo.org/prl/index.html" target="_blank" rel="noopener">PRL</a>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes" class="section">
+      <h2 class="reveal under">Notes</h2>
+
+      <div class="tile reveal">
+        <h3>Image analysis, guidance</h3>
+        <p>Keep claims grounded in what is visible. Avoid guessing age or motives. Use neutral terms. If a text uses offensive language, name the register and explain the effect, but do not repeat it in your own voice.</p>
+        <ul class="tight">
+          <li><b>Gaze:</b> Where the subject looks, how it directs us</li>
+          <li><b>Setting:</b> Props and light frame the subject</li>
+          <li><b>Contrast:</b> Foreground vs background, warm vs cool colours</li>
+          <li><b>Symbols:</b> Common cultural links a reader would share</li>
+          <li><b>Language:</b> If captions use demotic language, log the register, purpose, and impact</li>
+        </ul>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Rewrite example, safe academic voice</h3>
+        <p><b>Before:</b> Labels the subject and assumes inner motives.</p>
+        <p><b>After:</b> The boy's doll has no clothes while the girl's doll is dressed. This contrast draws attention to how the image plays with ideas of innocence and exposure. The choice may be designed to unsettle the viewer and raise questions about how children learn gendered norms. The direct gaze and the unicorn poster create tension between child like decor and mature themes.</p>
+      </div>
+
+      <div class="tile reveal">
+        <h3>Fields of inquiry to tag in IO</h3>
+        <p class="chips">
+          <span class="chip">Power</span>
+          <span class="chip">Justice</span>
+          <span class="chip">Belonging and otherness</span>
+          <span class="chip">Ethics of care</span>
+          <span class="chip">Identity</span>
+        </p>
       </div>
     </section>
   </main>
 
   <button id="toTop" aria-label="Back to top">↑</button>
-  <footer>© 2025 • Anthony Mauclair • Code-based website</footer>
+  <footer>© 2025 • Anthony Mauclair • Code based website</footer>
   <script src="script.js"></script>
 </body>
 </html>
