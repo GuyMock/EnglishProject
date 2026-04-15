@@ -1,445 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Anthony Mauclair - DP English Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Mauclair | DP English Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div id="progress" aria-hidden="true"></div>
 
-  <header id="top">
-    <div class="brand">
-      <div class="logo" aria-label="Logo AM">AM</div>
-      <div class="titles">
-        <h1>My DP English Portfolio</h1>
-        <p class="sub">IBDP Language A, 2025-2027</p>
-      </div>
+  <header class="site-header" id="top">
+    <div class="shell header-shell">
+      <a class="brand" href="#hero">
+        <span class="brand-mark" aria-hidden="true">AM</span>
+        <span class="brand-copy">
+          <span class="eyebrow">DP English Portfolio</span>
+          <span class="brand-title">My English revision hub</span>
+        </span>
+      </a>
+
+      <p class="header-summary">Cleaner notes, stronger structure, better vocabulary, less chaos.</p>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
+        Sections
+      </button>
     </div>
-    <nav aria-label="Primary">
-      <button id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+
+    <nav class="shell nav-shell" aria-label="Primary">
       <div id="navMenu" class="nav-menu">
         <a href="#hero">Home</a>
+        <a href="#plan">Plan</a>
+        <a href="#poster">Poster</a>
         <a href="#paper1">Paper 1</a>
-        <a href="#poster">Poster Plan</a>
-        <a href="#liza">Donnelly</a>
         <a href="#paper2">Paper 2</a>
-        <a href="#oral">IO Plan</a>
-        <a href="#grade7">Grade-7 Guide</a>
+        <a href="#oral">Oral &amp; IO</a>
+        <a href="#texts">Text Bank</a>
+        <a href="#gallery">Visuals</a>
         <a href="#glossary">Glossary</a>
         <a href="#checklist">Checklist</a>
-        <a href="#notes">Notes</a>
       </div>
     </nav>
   </header>
 
-  <!-- Quick dock for hard-to-click links -->
-  <nav class="dock" aria-label="Quick jump">
-    <a href="#checklist" class="dock-btn">Checklist</a>
-    <a href="#notes" class="dock-btn">Notes</a>
-  </nav>
-
   <main id="main">
-    <!-- HERO -->
-    <section id="hero" class="section hero" tabindex="-1">
-      <div class="hero-wrap">
-        <h2 class="xl reveal">IB English, one clear hub</h2>
-        <p class="lead reveal">All tasks in one place with fast navigation, clean plans, and simple visuals. Red theme, smooth motion, no clutter.</p>
-        <div class="cta reveal">
-          <a class="btn" href="#poster">Poster Plan</a>
-          <a class="btn ghost" href="#oral">IO Plan</a>
-          <a class="btn ghost" href="#grade7">Grade-7 Guide</a>
+    <section id="hero" class="section hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Anthony Mauclair | IBDP Language A | 2025-2027</p>
+          <h1>A cleaner portfolio that I can actually revise from</h1>
+          <p class="lead">
+            I turned my class notes into one study hub for Paper 1, Paper 2, the oral, the IO,
+            non-literary analysis, and terminology. The aim is simple: keep the useful detail,
+            fix the messy parts, and make everything easier to find under pressure.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#poster">Poster plan</a>
+            <a class="button button-ghost" href="#oral">Oral and IO</a>
+            <a class="button button-ghost" href="#glossary">Glossary</a>
+          </div>
         </div>
+
+        <aside class="hero-panel reveal">
+          <article class="hero-card">
+            <p class="eyebrow">Right now</p>
+            <h2>This week matters</h2>
+            <ul class="mini-list">
+              <li>Poster analysis due Friday</li>
+              <li>Oral focus: theme, tone, mood</li>
+              <li>IO focus: clear global issue and balanced structure</li>
+              <li>Final polish: no slang, no cliches, surname only</li>
+            </ul>
+          </article>
+
+          <article class="hero-card hero-card-accent">
+            <p class="eyebrow">My non-negotiables</p>
+            <ul class="mini-list">
+              <li>State the text type in the introduction</li>
+              <li>Use PEE or PEEL for every body paragraph</li>
+              <li>Use short quotes and analyse them properly</li>
+              <li>Finish with a planned final line</li>
+            </ul>
+          </article>
+        </aside>
       </div>
-      <div class="hero-orb orb1" aria-hidden="true"></div>
-      <div class="hero-orb orb2" aria-hidden="true"></div>
-      <div class="hero-orb orb3" aria-hidden="true"></div>
     </section>
 
-    <!-- PAPER 1 CARDS -->
-    <section id="paper1" class="section">
-      <h2 class="reveal under">Paper 1 - Visual Texts</h2>
-      <p class="reveal">Focus on purpose, audience, visual language, and how design choices shape meaning. Cards reveal as you scroll. Hover or tap for tilt.</p>
-      <div class="cards" aria-live="polite">
-        <article class="card reveal tilt">
-          <img src="assets/elephant.png" alt="Elephant turning into sand">
-          <div class="card-text">
-            <h3>Elephant turning into sand</h3>
-            <ul>
-              <li><b>Purpose:</b> Desertification harms wildlife</li>
-              <li><b>Audience:</b> Environment conscious viewers</li>
-              <li><b>Style:</b> Fade to dust, spotlight subject</li>
-              <li><b>Big idea:</b> Urgency and loss</li>
-              <li><b>Methods:</b> Photorealism, blending, soft light</li>
+    <section id="plan" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Plan</p>
+          <h2>What I should do before I start writing</h2>
+          <p>
+            This is the routine I want to follow so my work feels controlled instead of rushed.
+            It keeps the planning practical and stops me from drifting into description.
+          </p>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <span class="step-badge">1</span>
+            <h3>Annotate first</h3>
+            <ul class="mini-list">
+              <li>Mark techniques and the message they help create.</li>
+              <li>Label annotations as paragraph 1, 2, or 3.</li>
+              <li>Spot patterns, not random one-off details.</li>
             </ul>
+          </article>
+
+          <article class="panel reveal">
+            <span class="step-badge">2</span>
+            <h3>Build the argument</h3>
+            <ul class="mini-list">
+              <li>Move beyond literal meaning.</li>
+              <li>Frame ideas as a critique, commentary, or exploration.</li>
+              <li>Track how the text manipulates the audience.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <span class="step-badge">3</span>
+            <h3>Write with control</h3>
+            <ul class="mini-list">
+              <li>Use literary and linguistic terminology naturally.</li>
+              <li>Keep the tone academic but still sounding like me.</li>
+              <li>Do not rush the ending or begin a new point too late.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="strip-card reveal">
+          <h3>My working order</h3>
+          <div class="strip-flow" aria-label="Study workflow">
+            <span>Read the task</span>
+            <span>Annotate</span>
+            <span>Group ideas</span>
+            <span>Write a thesis</span>
+            <span>Use PEE or PEEL</span>
+            <span>Link back to purpose or global issue</span>
+            <span>End strongly</span>
+          </div>
+          <p class="small-note">
+            If the teacher says there are 30 seconds left, I should not start a new text or a new
+            paragraph. I should close the answer properly.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="poster" class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Poster This Friday</p>
+          <h2>Poster analysis I can use fast under pressure</h2>
+          <p>
+            The key is to start with the most dominant feature, then explain how the design choices
+            direct the viewer toward the message.
+          </p>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>Introduction formula</h3>
+            <ol class="number-list">
+              <li>Text type</li>
+              <li>Content in one clean line</li>
+              <li>Writer, artist, or brand</li>
+              <li>Context and where it appears</li>
+              <li>Tone</li>
+              <li>Purpose</li>
+              <li>Audience</li>
+              <li>Message</li>
+            </ol>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Body paragraph structure</h3>
+            <ol class="number-list">
+              <li><strong>Point:</strong> make a claim about a feature.</li>
+              <li><strong>Example:</strong> describe exactly what is visible.</li>
+              <li><strong>Explanation:</strong> analyse method, effect, and audience response.</li>
+              <li><strong>Link:</strong> connect back to purpose or message.</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>What to notice first</h3>
+            <ul class="mini-list">
+              <li>The most prominent feature in the frame</li>
+              <li>The focal point and where the eye lands first</li>
+              <li>The gaze of the subject, if there is a person</li>
+              <li>How side details create ambience without taking focus</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Colour and contrast</h3>
+            <ul class="mini-list">
+              <li>Colour palette and the mood it creates</li>
+              <li>Contrast between text and background</li>
+              <li>Contrast between subject and setting</li>
+              <li>Whether colours symbolise danger, calm, innocence, urgency, or luxury</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Text and typography</h3>
+            <ul class="mini-list">
+              <li>Font style, size, spacing, and graphic weight</li>
+              <li>Capital letters, bold text, and slogans</li>
+              <li>How punctuation creates pause, urgency, or emphasis</li>
+              <li>How the text design matches the wider message</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>Propaganda and persuasion toolkit</h3>
+            <ul class="mini-list">
+              <li><strong>Emotive language:</strong> duty, glory, sacrifice, honour</li>
+              <li><strong>Rhetorical question:</strong> the answer is already implied</li>
+              <li><strong>Peer pressure:</strong> everyone else seems to be involved</li>
+              <li><strong>Endorsement:</strong> famous or respected figures support the message</li>
+              <li><strong>Emotional blackmail:</strong> guilt is used to force agreement</li>
+              <li><strong>Hero imagery:</strong> the audience is invited to imagine themselves inside the role</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Starter I can adapt</h3>
+            <p class="model-line">
+              In this poster, <strong>[surname or brand]</strong> uses a dominant focal point,
+              deliberate colour contrast, and carefully placed text to guide the viewer toward the
+              message that <strong>[core idea]</strong>.
+            </p>
+            <p class="small-note">Everything on a poster is there for a reason, so I should treat every detail as deliberate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="paper1" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Paper 1</p>
+          <h2>Visual and non-literary analysis without overexplaining</h2>
+          <p>
+            My job is not to describe everything in the image. My job is to explain how selected
+            choices shape the message and position the audience.
+          </p>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>CFLCPGF photo framework</h3>
+            <ul class="mini-list">
+              <li><strong>C:</strong> Composition</li>
+              <li><strong>F:</strong> Focus or focal point</li>
+              <li><strong>L:</strong> Light</li>
+              <li><strong>C:</strong> Colour</li>
+              <li><strong>P:</strong> People or place</li>
+              <li><strong>G:</strong> Gaze</li>
+              <li><strong>F:</strong> Framing or cropping</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Cartoon question bank</h3>
+            <ul class="mini-list">
+              <li>What is the main issue and what is the context?</li>
+              <li>What is the main message about that issue?</li>
+              <li>Who are the central people and how are they represented?</li>
+              <li>What do the background and composition add?</li>
+              <li>How effective is the cartoon and why?</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Cartoon techniques</h3>
+            <ul class="mini-list">
+              <li>Colour, symbols, labels, and speech bubbles</li>
+              <li>Facial expression, angle, scale, and proportion</li>
+              <li>Emanata, gutters, panels, frames, and bleed</li>
+              <li>Caricature and graphic weight</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>Safer interpretation beats wild guessing</h3>
+            <p>
+              I should start with what is explicitly visible, then move to what it implies, and
+              only then connect it to the bigger message or context. That keeps the analysis
+              credible.
+            </p>
+            <ul class="mini-list">
+              <li>Avoid guessing exact age, motives, jealousy, or private thoughts.</li>
+              <li>Avoid labelling people in my own voice.</li>
+              <li>If harsh language appears in the text, discuss the register and its effect instead.</li>
+              <li>Keep claims grounded in evidence from the image or wording.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Turn weak comments into stronger analysis</h3>
+            <div class="compare-grid">
+              <div>
+                <p class="eyebrow">Weak</p>
+                <p>The girl wants to be like the doll and is jealous.</p>
+              </div>
+              <div>
+                <p class="eyebrow">Better</p>
+                <p>
+                  The contrast between the clothed doll and the unclothed doll suggests a tension
+                  between innocence and adult performance, which unsettles the viewer and exposes
+                  how gender expectations are being learned too early.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>Visual analysis language</h3>
+            <ul class="mini-list">
+              <li>positions the viewer</li>
+              <li>constructs sympathy</li>
+              <li>provokes discomfort</li>
+              <li>satirises social expectations</li>
+              <li>reinforces the central critique</li>
+              <li>normalises, challenges, exposes, or undercuts</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Photo analysis reminders</h3>
+            <ul class="mini-list">
+              <li>Rule of thirds can make the image feel deliberate and balanced.</li>
+              <li>Foreground and background often create social or emotional contrast.</li>
+              <li>Black-and-white photography can intensify starkness and seriousness.</li>
+              <li>Juxtaposition is one of the fastest ways to create a message.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Punctuation and syntax</h3>
+            <ul class="mini-list">
+              <li>Ellipsis can create a pause or a feeling of trailing thought.</li>
+              <li>A dash can signal interruption or hesitation.</li>
+              <li>Contractions can make a voice feel informal or intimate.</li>
+              <li>A short sentence can land like a punchline or warning.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="paper2" class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Paper 2</p>
+          <h2>Comparative writing that feels arguable, not descriptive</h2>
+          <p>
+            Strong Paper 2 writing comes from patterns, comparisons, and purpose. I need to move
+            beyond retelling and show how the writers build meaning differently.
+          </p>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>Essay architecture</h3>
+            <ul class="mini-list">
+              <li>Open with a comparative thesis, not a summary.</li>
+              <li>Make paragraph one the strongest.</li>
+              <li>Keep paragraph two a little lighter.</li>
+              <li>End paragraph three with power.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Move beyond the literal</h3>
+            <ul class="mini-list">
+              <li>Frame the text as a critique, commentary, or exploration.</li>
+              <li>Ask what the writer wants the audience to think or feel.</li>
+              <li>Push from surface detail to wider implication.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Patterns matter most</h3>
+            <ul class="mini-list">
+              <li>Repeated imagery reinforces a central idea.</li>
+              <li>Juxtapositions highlight conflict.</li>
+              <li>Tonal shifts show development or tension.</li>
+              <li>Structure can reveal control, collapse, or change.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>Zoom in, then zoom out</h3>
+            <ul class="mini-list">
+              <li>Zoom in on one phrase, image, or structural choice.</li>
+              <li>Analyse the method closely.</li>
+              <li>Zoom out to show how it connects to the whole work or global context.</li>
+              <li>Do not leave the quote floating on its own.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Authorial intent and audience</h3>
+            <ul class="mini-list">
+              <li>Consider how the reader is guided, manipulated, or unsettled.</li>
+              <li>Use phrases like <em>positions the reader</em> or <em>constructs sympathy</em>.</li>
+              <li>Do not overdo context, but use it when it strengthens the claim.</li>
+              <li>Short, well-analysed quotes beat long quotations every time.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="panel reveal">
+          <h3>Sentence stems I can actually use</h3>
+          <div class="stem-grid">
+            <p>The lexical choice of <strong>[word]</strong> suggests...</p>
+            <p>This pattern reinforces the wider critique of...</p>
+            <p>Rather than simply presenting <strong>[idea]</strong>, the writer exposes...</p>
+            <p>The contrast between <strong>[detail]</strong> and <strong>[detail]</strong> positions the reader to...</p>
+            <p>By zooming in on <strong>[method]</strong>, the text develops the broader idea that...</p>
+            <p>Both writers explore <strong>[theme]</strong>, but they do so through different tonal and structural choices.</p>
           </div>
         </article>
-        <article class="card reveal tilt">
-          <img src="assets/golfaxe.png" alt="Golfer swinging an axe">
-          <div class="card-text">
-            <h3>Golfer with an axe</h3>
-            <ul>
-              <li><b>Purpose:</b> Critique deforestation for leisure</li>
-              <li><b>Audience:</b> Golfers, developers</li>
-              <li><b>Style:</b> Calm scene with a jarring swap</li>
-              <li><b>Big idea:</b> Hidden costs of fun</li>
-              <li><b>Methods:</b> Irony, juxtaposition, contrast</li>
+      </div>
+    </section>
+
+    <section id="oral" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Oral And IO</p>
+          <h2>What I need to say, and how I need to sound</h2>
+          <p>
+            The oral works best when the structure is planned, the vocabulary is controlled, and
+            the final sentence feels deliberate instead of rushed.
+          </p>
+        </div>
+
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>Oral structure</h3>
+            <ol class="number-list">
+              <li>Start with text type, writer, context, and argument.</li>
+              <li>Talk about the verses, not just the general idea.</li>
+              <li>Use the chorus to track repetition or tonal shift.</li>
+              <li>Use the outro to show what remains with the listener.</li>
+              <li>Finish with a dynamic final sentence.</li>
+            </ol>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Theme, tone, mood</h3>
+            <ul class="mini-list">
+              <li><strong>Theme:</strong> the central idea or concern</li>
+              <li><strong>Tone:</strong> the speaker or writer's attitude</li>
+              <li><strong>Mood:</strong> the feeling created in the audience</li>
+              <li>Use all three, but keep them distinct</li>
             </ul>
-          </div>
-        </article>
-        <article class="card reveal tilt">
-          <img src="assets/girlnewspaper.png" alt="Girl wearing a dress made of newspaper">
-          <div class="card-text">
-            <h3>Winter collection girl</h3>
-            <ul>
-              <li><b>Purpose:</b> Expose child poverty with fashion codes</li>
-              <li><b>Audience:</b> Fashion industry and public</li>
-              <li><b>Style:</b> Studio minimalism</li>
-              <li><b>Big idea:</b> Trend can mask suffering</li>
-              <li><b>Methods:</b> Irony, direct gaze, restraint</li>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Delivery reminders</h3>
+            <ul class="mini-list">
+              <li>Slow down and let the analysis breathe.</li>
+              <li>No fillers like <em>um</em>, <em>yeah</em>, or <em>cool</em>.</li>
+              <li>Do not invent vocabulary I would never actually say.</li>
+              <li>The examiner should clearly know when I have finished.</li>
             </ul>
-          </div>
-        </article>
-        <article class="card reveal tilt">
-          <img src="assets/weightwatchers.png" alt="Narrow and wide doors at WeightWatchers">
-          <div class="card-text">
-            <h3>WeightWatchers doors</h3>
-            <ul>
-              <li><b>Purpose:</b> Visualize slimming result</li>
-              <li><b>Audience:</b> Weight loss seekers</li>
-              <li><b>Style:</b> Clean architectural pun</li>
-              <li><b>Big idea:</b> Before and after in one frame</li>
-              <li><b>Methods:</b> Minimalism, proportion play</li>
+          </article>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>IO global issue checklist</h3>
+            <ul class="mini-list">
+              <li>It should matter on a wide scale.</li>
+              <li>It should be transnational, not tied to one tiny setting.</li>
+              <li>Its impact should be felt across different contexts.</li>
+              <li>It must genuinely appear in both texts.</li>
             </ul>
-          </div>
-        </article>
-        <article class="card reveal tilt">
-          <img src="assets/chupachups.png" alt="Ants ignore a lollipop">
-          <div class="card-text">
-            <h3>Chupa Chups sugar free</h3>
-            <ul>
-              <li><b>Purpose:</b> Signal zero sugar</li>
-              <li><b>Audience:</b> Parents and kids</li>
-              <li><b>Style:</b> Realism with a twist</li>
-              <li><b>Big idea:</b> Even ants pass by</li>
-              <li><b>Methods:</b> Humor, symbolism, muted palette</li>
+            <p class="model-line">
+              <strong>Possible global issue:</strong> The enduring desire for human connection.
+            </p>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Fields of inquiry I can draw from</h3>
+            <div class="chip-row">
+              <span class="chip">Power, politics, and justice</span>
+              <span class="chip">Belonging and otherness</span>
+              <span class="chip">Identity and social expectation</span>
+              <span class="chip">Culture and community</span>
+              <span class="chip">Creativity and resistance</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="board board-2">
+          <article class="panel reveal">
+            <h3>IO pairing idea</h3>
+            <p>
+              <strong>Literary text:</strong> The Smiths, <em>There Is a Light That Never Goes Out</em>
+            </p>
+            <p>
+              <strong>Non-literary body of work:</strong> Liza Donnelly cartoons about gender, belonging,
+              fear, and social expectation
+            </p>
+            <ul class="mini-list">
+              <li>The song presents connection as something intense, risky, and deeply desired.</li>
+              <li>Donnelly shows how social scripts can isolate people even inside everyday life.</li>
+              <li>That gives me a shared issue without forcing the texts to be identical.</li>
             </ul>
-          </div>
-        </article>
-        <article class="card reveal tilt">
-          <img src="assets/glasses.png" alt="Glasses frame revealing clear detail">
-          <div class="card-text">
-            <h3>Glasses, see clearly</h3>
-            <ul>
-              <li><b>Purpose:</b> Clarity sells the product</li>
-              <li><b>Audience:</b> Anyone needing vision help</li>
-              <li><b>Style:</b> Real detail inside lens</li>
-              <li><b>Big idea:</b> Hidden detail unlocked</li>
-              <li><b>Methods:</b> Depth of field, focal contrast</li>
+          </article>
+
+          <article class="panel reveal">
+            <h3>What I should remember in the IO</h3>
+            <ul class="mini-list">
+              <li>Quote once only, then analyse it properly.</li>
+              <li>Use surname only when referring to writers.</li>
+              <li>Refer to the global issue more than once, but do not force it every sentence.</li>
+              <li>A body of work means more than one image.</li>
             </ul>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- POSTER PLAN -->
-    <section id="poster" class="section alt">
-      <h2 class="reveal under">Poster Plan - due Friday</h2>
-      <div class="grid two">
-        <div class="tile reveal">
-          <h3>Intro checklist</h3>
-          <ol class="tight">
-            <li>Text type, date, source</li>
-            <li>Content in one line</li>
-            <li>Writer or brand</li>
-            <li>Context, where seen, why now</li>
-            <li>Tone words</li>
-            <li>Purpose, inform or persuade or call to action</li>
-            <li>Audience, who and why</li>
-            <li>Message, the core claim</li>
-          </ol>
+    <section id="texts" class="section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Text Bank</p>
+          <h2>Useful reminders for texts, writers, and bodies of work</h2>
+          <p>
+            This is not for biography dumping. It is for storing the details that help me build
+            better analysis.
+          </p>
         </div>
-        <div class="tile reveal">
-          <h3>PEEL body plan</h3>
-          <ol class="tight">
-            <li><b>Point</b>, the main visual draw</li>
-            <li><b>Example</b>, what you see, precise</li>
-            <li><b>Explanation</b>, method and effect</li>
-            <li><b>Link</b>, back to purpose or audience</li>
-          </ol>
+
+        <div class="resource-grid">
+          <article class="resource-card reveal">
+            <p class="resource-tag">Lyric</p>
+            <h3>The Smiths - <em>There Is a Light That Never Goes Out</em></h3>
+            <ul class="mini-list">
+              <li>Theme: longing, escape, and the need for closeness.</li>
+              <li>Tone: tender, dramatic, confessional.</li>
+              <li>Useful methods: repetition, hyperbole, journey imagery, motif of light.</li>
+              <li>Strong angle: danger is romanticised because connection matters more than safety.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Lyric</p>
+            <h3>The Smiths - <em>Meat Is Murder</em></h3>
+            <ul class="mini-list">
+              <li>Theme: violence, ethics, and moral responsibility.</li>
+              <li>Tone: accusatory, disturbing, confrontational.</li>
+              <li>Useful methods: sensory imagery, imperative force, moral shock.</li>
+              <li>Strong angle: discomfort is the method, not an accident.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Cartoons</p>
+            <h3>Liza Donnelly</h3>
+            <ul class="mini-list">
+              <li>Humour is used as a tool for social criticism and change.</li>
+              <li>Repeated concerns: gender expectation, belonging, tokenism, fear of womanhood.</li>
+              <li>Useful methods: caption-image contrast, satire, imperative lists, reversal.</li>
+              <li>Strong angle: the cartoons make familiar pressure look absurd.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Poetry</p>
+            <h3>Philip Larkin - <em>Mr Bleaney</em> and related notes</h3>
+            <ul class="mini-list">
+              <li>Key ideas: routine, limitation, emptiness, and ordinary loneliness.</li>
+              <li>Useful methods: injected dialogue, listing, flat diction, ambiguity.</li>
+              <li>Strong angle: the room can feel almost like a quiet coffin or social trap.</li>
+              <li>Reminder: biography can help, but the poem itself should stay central.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Photography</p>
+            <h3>Robert Capa and war photography</h3>
+            <ul class="mini-list">
+              <li>Key ideas: immediacy, human cost, danger, dignity under pressure.</li>
+              <li>Useful methods: framing, frozen motion, black-and-white contrast, proximity.</li>
+              <li>Strong angle: photographs do not just document war, they force emotional response.</li>
+              <li>Reminder: talk about composition and viewer effect, not only historical facts.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Drama</p>
+            <h3>Shakespeare - <em>Romeo and Juliet</em></h3>
+            <ul class="mini-list">
+              <li>Talk about it as a play: actors, audience, performance, staging.</li>
+              <li>Key concerns: conflict, masculinity, banter, public violence, private feeling.</li>
+              <li>Useful methods: innuendo, dramatic irony, soliloquy, oxymoron, sonnet form.</li>
+              <li>Reminder: Juliet should still feel young, and the Nurse matters as a maternal presence.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Propaganda</p>
+            <h3>First World War posters</h3>
+            <ul class="mini-list">
+              <li>Context: recruitment and persuasion before modern social media.</li>
+              <li>Useful methods: capital letters, uniforms, direct address, guilt, heroism.</li>
+              <li>Strong angle: propaganda does not just inform; it manipulates behaviour.</li>
+              <li>Reminder: British athletes or young men can be the implied audience.</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <p class="resource-tag">Comparisons</p>
+            <h3>Possible wider reading pool</h3>
+            <div class="chip-row">
+              <span class="chip">1984</span>
+              <span class="chip">The Boy in the Striped Pyjamas</span>
+              <span class="chip">The Hunger Games</span>
+              <span class="chip">The Kite Runner</span>
+              <span class="chip">To Kill a Mockingbird</span>
+              <span class="chip">The Color Purple</span>
+              <span class="chip">Of Mice and Men</span>
+              <span class="chip">Lady Chatterley's Lover</span>
+            </div>
+            <p class="small-note">Only use comparison texts if I actually know them well enough to analyse them properly.</p>
+          </article>
         </div>
-      </div>
-
-      <div class="tile reveal">
-        <h3>What to cover fast</h3>
-        <ul class="tight">
-          <li>Dominant element, what hits the eye first</li>
-          <li>Colour choice, fit to mood and brand</li>
-          <li>Gaze and focus, who looks at whom</li>
-          <li>Contrast, text vs background, figure vs ground</li>
-          <li>Side details, ambience, do not over read</li>
-          <li>Symbolism, clear, not far fetched</li>
-          <li>Typography, font, size, weight, alignment, spacing</li>
-          <li>Micro effects, punctuation can slow the reader</li>
-        </ul>
-      </div>
-
-      <div class="tile reveal">
-        <h3>Mini template</h3>
-        <p><b>Guiding question:</b> How do visual choices lead the viewer to the message?</p>
-        <p><b>Thesis:</b> The poster guides attention with the dominant element, builds tone with colour and contrast, and closes with clean type and a clear call to action for the target audience.</p>
       </div>
     </section>
 
-    <!-- DONNELLY CASE STUDY AND GALLERY -->
-    <section id="liza" class="section">
-      <h2 class="reveal under">Liza Donnelly - humor for change</h2>
-
-      <div class="grid two">
-        <div class="tile reveal">
-          <h3>Core ideas</h3>
-          <ul class="tight">
-            <li>Gender expectations, fear of womanhood, pressure to conform</li>
-            <li>Imperatives in culture, "Eat this, wear this, do this, buy this, want this"</li>
-            <li>Media saturation, images that teach roles early</li>
-            <li>Home as first imprint, colour coding like pink as a signal</li>
-            <li>Drawing as voice, approval without speaking</li>
-            <li>Reversal captions that subvert common sayings</li>
-            <li>One laugh at a time, small shifts add up</li>
-          </ul>
+    <section id="gallery" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visual Practice</p>
+          <h2>Images I can practise analysing</h2>
+          <p>
+            Click any image to enlarge it. Each one includes the main angle I should notice first
+            so I can practise starting with the strongest point.
+          </p>
         </div>
-        <div class="tile reveal">
-          <h3>Methods and effects</h3>
-          <ul class="tight">
-            <li><b>Juxtaposition:</b> exaggerated figure beside a plain crowd to show what stands out</li>
-            <li><b>Hyperbole:</b> big hair or oversized bag as pressure made visible</li>
-            <li><b>Irony:</b> "I want to look like X, but not seem like X" - image vs identity</li>
-            <li><b>Intertext:</b> public figures used as mirrors for trends</li>
-            <li><b>Register shifts:</b> demotic captions for direct connection</li>
-            <li><b>Visual contrast:</b> dark line on pale ground for fast focus</li>
-            <li><b>Punchline timing:</b> short line after a setup image</li>
-          </ul>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="The elephant dissolves into sand, turning habitat loss into a visible physical disappearance.">
+              <img src="assets/elephant.png" alt="Elephant dissolving into sand">
+            </button>
+            <figcaption>
+              <h3>Elephant dissolving into sand</h3>
+              <ul class="mini-list">
+                <li>Notice the fade from solid body to dust.</li>
+                <li>Link it to loss, fragility, and urgency.</li>
+                <li>Soft blending makes the destruction feel naturalised and frightening.</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="The axe replacing the golf club creates immediate irony: leisure is built on destruction.">
+              <img src="assets/golfaxe.png" alt="Golfer swinging an axe instead of a club">
+            </button>
+            <figcaption>
+              <h3>Golfer with an axe</h3>
+              <ul class="mini-list">
+                <li>Start with the shocking object swap.</li>
+                <li>Use irony and juxtaposition.</li>
+                <li>The calm scene makes the violence seem even more unsettling.</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="The newspaper dress turns fashion codes into a comment on poverty and social neglect.">
+              <img src="assets/girlnewspaper.png" alt="Girl wearing a dress made from newspaper">
+            </button>
+            <figcaption>
+              <h3>Newspaper dress</h3>
+              <ul class="mini-list">
+                <li>The pose looks elegant, but the material undercuts that glamour.</li>
+                <li>Contrast the fashion styling with hardship.</li>
+                <li>The clean background keeps the focus on the social message.</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="Different-sized doors create a visual pun about transformation and body image.">
+              <img src="assets/weightwatchers.png" alt="Weight loss advertisement with narrow and wide doors">
+            </button>
+            <figcaption>
+              <h3>WeightWatchers doors</h3>
+              <ul class="mini-list">
+                <li>Size and proportion carry the whole message.</li>
+                <li>Minimalism keeps the idea instant and memorable.</li>
+                <li>The ad sells change without a long explanation.</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="If even ants ignore the lollipop, the product must be sugar free. Humor becomes the selling point.">
+              <img src="assets/chupachups.png" alt="Ants ignoring a lollipop">
+            </button>
+            <figcaption>
+              <h3>Ants ignore the lollipop</h3>
+              <ul class="mini-list">
+                <li>Use humour and visual logic.</li>
+                <li>The product claim is shown instead of explained.</li>
+                <li>The empty space helps the idea land quickly.</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card reveal">
+            <button class="gallery-button" type="button" data-caption="The baby, the pink palette, and the command-like list satirise how gender expectations begin early.">
+              <img src="assets/Baby.webp" alt="Cartoon of a baby surrounded by pink-coded expectations">
+            </button>
+            <figcaption>
+              <h3>Baby and pink-coded expectations</h3>
+              <ul class="mini-list">
+                <li>Notice the list of imperatives and beauty items.</li>
+                <li>Pink works as cultural shorthand for gender scripting.</li>
+                <li>The humour exposes how learned identity starts almost immediately.</li>
+              </ul>
+            </figcaption>
+          </figure>
         </div>
-      </div>
-
-      <div class="tile reveal">
-        <h3>Model PEEL for Baby girl expectation</h3>
-        <p><b>Point:</b> Donnelly uses imperative language and colour coding to show how gender roles are taught from birth.</p>
-        <p><b>Example:</b> The mother lists commands - "Rouge!", "lipstick!", "handbag!", "pink!" - while a baby lies in a pink blanket.</p>
-        <p><b>Explanation:</b> The staccato imperatives imitate advertising and social advice. Pink works as shorthand for a preset identity. Words plus palette turn infancy into a lesson in how to perform "girl".</p>
-        <p><b>Link:</b> By pushing the list toward absurdity, the cartoon makes the script visible and invites the viewer to question it.</p>
-      </div>
-
-      <div class="gallery reveal" aria-label="Donnelly gallery">
-        <figure class="g-item"><img src="assets/Baby.webp" alt="Mother listing pink coded items to a baby"/></figure>
-        <figure class="g-item"><img src="assets/supposed.jpeg" alt="Boardroom with a woman thinking I am supposed to be here"/></figure>
-        <figure class="g-item"><img src="assets/Harold.jpeg" alt="Boardroom caption I have asked Harold to provide the feminist viewpoint"/></figure>
-        <figure class="g-item"><img src="assets/Testify.jpg" alt="How to testify as a woman annotated guide"/></figure>
-        <figure class="g-item"><img src="assets/World.jpeg" alt="Hospital nursery with pink and blue groupings - Where it all begins"/></figure>
-        <figure class="g-item"><img src="assets/rape.jpg" alt="Checklist of fears about being assaulted - social commentary"/></figure>
-        <figure class="g-item"><img src="assets/TheWorld.jpeg" alt="Two Worlds - stylish woman stepping over a man lying on the street"/></figure>
-      </div>
-
-      <div class="tile reveal">
-        <h3>Safety on tone</h3>
-        <p>Keep analysis neutral and precise. Do not label subjects. If a caption uses harsh or sensitive language, name the register and explain the effect on the reader. Aim for clarity and care.</p>
       </div>
     </section>
 
-    <!-- PAPER 2 -->
-    <section id="paper2" class="section alt">
-      <h2 class="reveal under">Paper 2 - Literary Comparison</h2>
-      <p class="reveal">Compare works with focus on theme, method, structure, voice, and context. Use precise quotes and keep the line of argument tight.</p>
-      <div class="pill-grid reveal" aria-hidden="true">
-        <span class="pill">Theme mapping</span>
-        <span class="pill">Narrative method</span>
-        <span class="pill">Voice and tone</span>
-        <span class="pill">Structure and form</span>
-        <span class="pill">Context links</span>
-        <span class="pill">Comparative claims</span>
-      </div>
-    </section>
-
-    <!-- IO PLAN -->
-    <section id="oral" class="section">
-      <h2 class="reveal under">IO Plan - desire for human connection</h2>
-      <div class="io-grid">
-        <div class="io-tile reveal">
-          <h3>Texts</h3>
-          <ul class="tight">
-            <li><b>Literary:</b> The Smiths, "There Is a Light That Never Goes Out"</li>
-            <li><b>Non-literary:</b> Select one Donnelly cartoon above</li>
-          </ul>
-          <p class="muted">For the real IO, pair one literary with one non-literary. Use one short quote per text.</p>
-        </div>
-        <div class="io-tile reveal">
-          <h3>Flow</h3>
-          <ol>
-            <li>Hook, text type, writer, context, audience</li>
-            <li>Guiding question and thesis</li>
-            <li>Verse 1, zoom in</li>
-            <li>Chorus, shift in tone</li>
-            <li>Outro, final mood</li>
-            <li>Whole work and impact</li>
-          </ol>
-        </div>
-        <div class="io-tile reveal">
-          <h3>Thesis</h3>
-          <p>The song turns risk into a tender wish to show how far isolation can push the need to belong. It uses a confessional voice, night drive imagery, anaphora, and a light motif that suggests safety.</p>
-        </div>
-      </div>
-      <div class="tile reveal">
-        <h3>Key evidence</h3>
-        <blockquote>And if a double decker bus crashes into us, to die by your side is such a heavenly way to die.</blockquote>
-        <p><b>Method:</b> Hyperbole, irony, romantic fatalism. <b>Effect:</b> Danger turned into union. <b>Link:</b> Connection outweighs fear.</p>
-      </div>
-    </section>
-
-    <!-- GRADE-7 GUIDE -->
-    <section id="grade7" class="section alt">
-      <h2 class="reveal under">Grade-7 Guide - HL and SL</h2>
-      <div class="grid two">
-        <div class="tile reveal">
-          <h3>IB Intro - say this first</h3>
-          <ol class="tight">
-            <li><b>Text type</b> ad, poster, op-ed, lyric, etc.</li>
-            <li><b>Content</b> one clear line</li>
-            <li><b>Writer</b> surname only</li>
-            <li><b>Context</b> where and why it appears</li>
-            <li><b>Tone</b> 2-3 precise words</li>
-            <li><b>Purpose</b> inform, persuade, call to action</li>
-            <li><b>Audience</b> who and why</li>
-            <li><b>Message</b> the core claim</li>
-          </ol>
-        </div>
-        <div class="tile reveal">
-          <h3>Body engine - PEEL</h3>
-          <ul class="tight">
-            <li><b>Point</b> name a method and claim an effect</li>
-            <li><b>Example</b> describe what the reader sees or hears</li>
-            <li><b>Explanation</b> connect method - effect - audience</li>
-            <li><b>Link</b> back to purpose or guiding question</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid two">
-        <div class="tile reveal">
-          <h3>Paper 1 - Visual text</h3>
-          <ul class="tight">
-            <li>2-3 body paragraphs, each on a cluster of methods</li>
-            <li>Hit <b>composition, colour, gaze, contrast, type</b></li>
-            <li>Weave <b>purpose, audience</b> into every paragraph</li>
-            <li>Finish with a <b>final line</b> that answers the task</li>
-          </ul>
-        </div>
-        <div class="tile reveal">
-          <h3>Paper 2 - Literature</h3>
-          <ul class="tight">
-            <li>Set a <b>comparative thesis</b> and map 3-4 claims</li>
-            <li>Topic sentence = <b>method + insight + contrast</b></li>
-            <li>One <b>short quote</b> at a time, analyze diction or syntax</li>
-            <li>Close on <b>why it matters</b> for readers then and now</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tile reveal">
-        <h3>IO - global issue quick grid</h3>
-        <table class="table">
-          <thead><tr><th>Step</th><th>What to say</th><th>How to show skill</th></tr></thead>
-          <tbody>
-            <tr><td>Define</td><td>Transnational, broad impact, seen in both texts</td><td>One line definition, no vagueness</td></tr>
-            <tr><td>Construct</td><td>How each text builds the issue</td><td>Method + effect + audience</td></tr>
-            <tr><td>Synthesize</td><td>Where they align or differ</td><td>Compare function, not topic</td></tr>
-            <tr><td>Impact</td><td>What the audience is meant to think or do</td><td>Link to purpose, one sentence only</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- GLOSSARY -->
     <section id="glossary" class="section">
-      <h2 class="reveal under">Glossary</h2>
-      <p class="reveal">Key terms for fast reference. Add more as needed.</p>
-      <table class="table glossary-table">
-        <thead>
-          <tr><th>Word</th><th>Meaning</th><th>Example</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Register</td><td>Level of formality in language</td><td>Courtroom vs chat with friends</td></tr>
-          <tr><td>Demotic language</td><td>Everyday speech, may include slang</td><td>Name the register, not the person</td></tr>
-          <tr><td>Anaphora</td><td>Repetition at the start of lines or clauses</td><td>Take me out... repeated</td></tr>
-          <tr><td>Motif</td><td>Recurring element or image</td><td>Light as safety in a song</td></tr>
-          <tr><td>PEEL</td><td>Point, Example, Explanation, Link</td><td>Use for clean paragraph logic</td></tr>
-        </tbody>
-      </table>
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Glossary</p>
+          <h2>A large term bank I can search quickly</h2>
+          <p>
+            I only want to use a term if I can explain its effect. The glossary is here to make the
+            language clearer, not more complicated.
+          </p>
+        </div>
+
+        <div class="glossary-toolbar reveal">
+          <label class="search-field" for="glossarySearch">
+            <span class="search-label">Search</span>
+            <input id="glossarySearch" type="search" placeholder="Search a term, category, or definition">
+          </label>
+
+          <div id="glossaryFilters" class="filter-row" aria-label="Glossary filters"></div>
+        </div>
+
+        <p class="glossary-count reveal"><span id="glossaryCount">0</span> terms</p>
+        <div id="glossaryList" class="glossary-grid" aria-live="polite"></div>
+
+        <noscript>
+          <p class="small-note">The glossary uses JavaScript to render. Please enable JavaScript to view the full term bank.</p>
+        </noscript>
+      </div>
     </section>
 
-    <!-- CHECKLIST -->
-    <section id="checklist" class="section alt">
-      <h2 class="reveal under">Assessment checklist</h2>
-      <ul class="ticks reveal">
-        <li>Surname only in academic work</li>
-        <li>State text type in the first line</li>
-        <li>Quote once per text in the IO</li>
-        <li>Use PEE or PEEL for each body paragraph</li>
-        <li>Annotate first, plan, then write</li>
-        <li>No slang, no cliches</li>
-        <li>Vary punctuation, aim for nine marks across the piece</li>
-        <li>End with a clear final line that answers the question</li>
-        <li>Name methods and effects, then audience impact</li>
-      </ul>
-    </section>
+    <section id="checklist" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Checklist</p>
+          <h2>Final reminders before I submit or speak</h2>
+          <p>These are the habits that keep my work sharp and stop easy mistakes costing marks.</p>
+        </div>
 
-    <!-- NOTES -->
-    <section id="notes" class="section">
-      <h2 class="reveal under">Notes</h2>
+        <div class="board board-3">
+          <article class="panel reveal">
+            <h3>Always do</h3>
+            <ul class="tick-list">
+              <li>Use surname only for writers and authors.</li>
+              <li>State the text type in the introduction.</li>
+              <li>Use short quotes and analyse them properly.</li>
+              <li>Link every paragraph back to message, purpose, or global issue.</li>
+              <li>Plan the final sentence before I start.</li>
+            </ul>
+          </article>
 
-      <div class="tile reveal">
-        <h3>Image analysis, guidance</h3>
-        <p>Keep claims grounded in what is visible. Avoid guessing age or motives. Use neutral terms. If a text uses offensive language, name the register and explain the effect, but do not repeat it in your own voice.</p>
-        <ul class="tight">
-          <li><b>Gaze:</b> where the subject looks</li>
-          <li><b>Setting:</b> props and light frame the subject</li>
-          <li><b>Contrast:</b> foreground vs background, warm vs cool colours</li>
-          <li><b>Symbols:</b> shared cultural links</li>
-          <li><b>Language:</b> if captions use demotic language, log the register, purpose, and impact</li>
-        </ul>
-      </div>
+          <article class="panel reveal">
+            <h3>Never do</h3>
+            <ul class="tick-list tick-list-danger">
+              <li>No slang, no cliches, no lazy filler words.</li>
+              <li>Do not state the obvious and stop there.</li>
+              <li>Do not list techniques without analysing effect.</li>
+              <li>Do not force statistics into an oral that needs textual evidence.</li>
+              <li>Do not sound fake by using vocabulary that is not really mine.</li>
+            </ul>
+          </article>
 
-      <div class="tile reveal">
-        <h3>Rewrite example, safe academic voice</h3>
-        <p><b>Before:</b> Labels the subject and assumes motives.</p>
-        <p><b>After:</b> The baby's blanket and the list of beauty items create a contrast between infancy and performance. The choice is designed to unsettle the viewer and raise questions about how gender roles are taught.</p>
-      </div>
+          <article class="panel reveal">
+            <h3>Punctuation range</h3>
+            <ul class="mini-list">
+              <li>comma</li>
+              <li>colon</li>
+              <li>semicolon</li>
+              <li>dash</li>
+              <li>question mark</li>
+              <li>exclamation mark</li>
+              <li>brackets</li>
+              <li>ellipsis</li>
+              <li>full stop</li>
+            </ul>
+            <p class="small-note">Use variety naturally. The point is control, not forcing punctuation for the sake of it.</p>
+          </article>
+        </div>
 
-      <div class="tile reveal">
-        <h3>Fields of inquiry for IO</h3>
-        <p class="chips">
-          <span class="chip">Power</span>
-          <span class="chip">Justice</span>
-          <span class="chip">Belonging and otherness</span>
-          <span class="chip">Ethics of care</span>
-          <span class="chip">Identity</span>
-        </p>
+        <article class="strip-card reveal">
+          <h3>Final line reminder</h3>
+          <p class="model-line">
+            A strong ending should sound earned. It should return to the task, the message, and the
+            wider significance in one clean sentence, not drift away.
+          </p>
+        </article>
       </div>
     </section>
   </main>
 
-  <button id="toTop" aria-label="Back to top">↑</button>
-  <footer>© 2025 • Anthony Mauclair • Code based website</footer>
+  <button id="toTop" class="to-top" type="button" aria-label="Back to top">↑</button>
 
-  <!-- Lightbox for gallery -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
-    <button class="lb-close" aria-label="Close">×</button>
-    <button class="lb-prev" aria-label="Previous">‹</button>
-    <img id="lbImg" alt="Expanded gallery image">
-    <figcaption id="lbCap"></figcaption>
-    <button class="lb-next" aria-label="Next">›</button>
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <p>Anthony Mauclair | DP English Portfolio</p>
+      <p>Built as a cleaner revision space for notes, planning, and analysis.</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImage" alt="Expanded study image">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
   </div>
 
   <script src="script.js"></script>
