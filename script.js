@@ -1,3 +1,6 @@
+// Anthony Mauclair — revision hub behaviour + term bank.
+// The glossary notes are mine: things that worked, things I keep getting wrong.
+
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
 
@@ -122,967 +125,457 @@ if (toTopButton) {
   });
 }
 
+// ------------------------------------------------------------------
+// Term bank. Definitions kept short; the italic note underneath each
+// card is my own — where a term earned its place or tripped me up.
+// ------------------------------------------------------------------
 const glossaryTerms = [
-  {
-    term: "Active voice",
-    category: "Grammar",
-    definition: "A sentence structure where the subject performs the action.",
-    use: "Usually sounds clearer and more direct than passive voice."
-  },
-  {
-    term: "Adjective",
-    category: "Grammar",
-    definition: "A word that describes a noun.",
-    use: "Useful when zooming in on precise descriptive choices."
-  },
-  {
-    term: "Adverb",
-    category: "Grammar",
-    definition: "A word that modifies a verb, adjective, or another adverb.",
-    use: "Can shape pace, certainty, intensity, or attitude."
-  },
-  {
-    term: "Analysis",
-    category: "Argument",
-    definition: "Breaking a detail down to explain how it creates meaning.",
-    use: "Moves writing beyond summary or description."
-  },
-  {
-    term: "Alliteration",
-    category: "Language",
-    definition: "Repetition of initial consonant sounds in nearby words.",
-    use: "Often creates emphasis, rhythm, or memorability."
-  },
-  {
-    term: "Allusion",
-    category: "Language",
-    definition: "An indirect reference to another text, event, or cultural idea.",
-    use: "Can add depth by borrowing meaning from elsewhere."
-  },
-  {
-    term: "Ambiguity",
-    category: "Language",
-    definition: "Language that allows more than one possible meaning.",
-    use: "Useful when a text feels uncertain, unstable, or layered."
-  },
-  {
-    term: "Anaphora",
-    category: "Language",
-    definition: "Repetition at the start of clauses, lines, or sentences.",
-    use: "Builds momentum, insistence, or emotional force."
-  },
-  {
-    term: "Angle",
-    category: "Visual",
-    definition: "The viewpoint from which an image is shown.",
-    use: "High and low angles can suggest vulnerability or power."
-  },
-  {
-    term: "Antithesis",
-    category: "Language",
-    definition: "A deliberate contrast between two ideas in balanced wording.",
-    use: "Highlights conflict, tension, or opposition."
-  },
-  {
-    term: "Aside",
-    category: "Literature",
-    definition: "A brief line spoken directly to the audience while other characters do not hear it.",
-    use: "Creates intimacy, irony, or secret knowledge in drama."
-  },
-  {
-    term: "Assonance",
-    category: "Language",
-    definition: "Repetition of vowel sounds in nearby words.",
-    use: "Can create softness, melancholy, or musicality."
-  },
-  {
-    term: "Audience",
-    category: "Argument",
-    definition: "The intended reader, viewer, or listener of a text.",
-    use: "Every effect should be linked back to audience response."
-  },
-  {
-    term: "Authorial intent",
-    category: "Argument",
-    definition: "What the writer or creator seems to want the audience to think, feel, or question.",
-    use: "Helps push analysis toward purpose, not just technique spotting."
-  },
-  {
-    term: "Background",
-    category: "Visual",
-    definition: "The area behind the main subject in an image.",
-    use: "Can add atmosphere, context, or contrast without becoming the focal point."
-  },
-  {
-    term: "Blank verse",
-    category: "Literature",
-    definition: "Unrhymed lines written in iambic pentameter.",
-    use: "Common in Shakespeare and useful when discussing dramatic rhythm."
-  },
-  {
-    term: "Bleed",
-    category: "Visual",
-    definition: "When an image runs to the edge of the frame or page without a border.",
-    use: "Can make a cartoon or page feel more immersive or immediate."
-  },
-  {
-    term: "Body of work",
-    category: "Oral & IO",
-    definition: "A group of related non-literary texts by the same creator.",
-    use: "Important in the IO because one image alone is not a full body of work."
-  },
-  {
-    term: "Call to action",
-    category: "Visual",
-    definition: "Language that directly tells the audience what to do next.",
-    use: "Common in adverts and propaganda posters."
-  },
-  {
-    term: "Caption",
-    category: "Visual",
-    definition: "A short written line attached to an image or cartoon.",
-    use: "Can anchor meaning, create irony, or deliver the punchline."
-  },
-  {
-    term: "Caricature",
-    category: "Visual",
-    definition: "An exaggerated visual representation of a person.",
-    use: "Often used in cartoons to mock behaviour, image, or power."
-  },
-  {
-    term: "Caesura",
-    category: "Literature",
-    definition: "A pause within a line, often created by punctuation.",
-    use: "Can slow rhythm, split ideas, or mimic hesitation."
-  },
-  {
-    term: "Claim",
-    category: "Argument",
-    definition: "A clear interpretive point that can be supported with evidence.",
-    use: "Each paragraph should begin with a claim, not a random observation."
-  },
-  {
-    term: "Clause",
-    category: "Grammar",
-    definition: "A group of words containing a subject and a verb.",
-    use: "Useful when analysing how sentences are built."
-  },
-  {
-    term: "Cliche",
-    category: "Language",
-    definition: "An overused expression that has lost freshness.",
-    use: "Usually something to avoid in academic writing."
-  },
-  {
-    term: "Colloquial language",
-    category: "Language",
-    definition: "Informal language used in everyday speech.",
-    use: "Can create familiarity, realism, or directness."
-  },
-  {
-    term: "Colour palette",
-    category: "Visual",
-    definition: "The overall range of colours used in an image.",
-    use: "Shapes mood, symbolism, and emotional tone."
-  },
-  {
-    term: "Comparative thesis",
-    category: "Argument",
-    definition: "A thesis that compares how two texts treat a shared idea.",
-    use: "Essential for Paper 2 because it sets up the whole argument."
-  },
-  {
-    term: "Composition",
-    category: "Visual",
-    definition: "The arrangement of elements within an image.",
-    use: "Helps explain focus, balance, and visual movement."
-  },
-  {
-    term: "Connotation",
-    category: "Language",
-    definition: "The ideas and feelings a word suggests beyond its literal meaning.",
-    use: "Great for close analysis of single-word choices."
-  },
-  {
-    term: "Contraction",
-    category: "Grammar",
-    definition: "A shortened form such as can't or I'm.",
-    use: "Often creates a more informal, intimate, or spoken voice."
-  },
-  {
-    term: "Context",
-    category: "Argument",
-    definition: "The surrounding social, historical, cultural, or textual circumstances.",
-    use: "Should support interpretation, not replace it."
-  },
-  {
-    term: "Contrast",
-    category: "Visual",
-    definition: "A strong difference between elements such as colour, size, light, or ideas.",
-    use: "Directs attention and sharpens meaning."
-  },
-  {
-    term: "Critique",
-    category: "Argument",
-    definition: "A text's examination or challenge of an idea, value, or system.",
-    use: "Useful when moving beyond simple description."
-  },
-  {
-    term: "Crop",
-    category: "Visual",
-    definition: "The way an image is cut or framed.",
-    use: "Can remove context, intensify focus, or create tension."
-  },
-  {
-    term: "Dash",
-    category: "Grammar",
-    definition: "A punctuation mark used to interrupt, extend, or sharply shift thought.",
-    use: "Often creates emphasis or sudden change in rhythm."
-  },
-  {
-    term: "Declarative sentence",
-    category: "Grammar",
-    definition: "A sentence that states something directly.",
-    use: "Can sound certain, blunt, or authoritative."
-  },
-  {
-    term: "Demotic language",
-    category: "Language",
-    definition: "The language of ordinary everyday speech.",
-    use: "Useful when a text draws on common spoken register."
-  },
-  {
-    term: "Depth of field",
-    category: "Visual",
-    definition: "How much of an image appears sharp from front to back.",
-    use: "A blurred background can push the eye toward one focal point."
-  },
-  {
-    term: "Dialogue",
-    category: "Literature",
-    definition: "Conversation between characters.",
-    use: "Can reveal conflict, power, intimacy, or social tension."
-  },
-  {
-    term: "Diction",
-    category: "Language",
-    definition: "A writer's choice of words.",
-    use: "One of the quickest ways to analyse tone and attitude."
-  },
-  {
-    term: "Direct gaze",
-    category: "Visual",
-    definition: "When a subject looks straight at the viewer.",
-    use: "Can create confrontation, connection, or pressure."
-  },
-  {
-    term: "Dramatic irony",
-    category: "Literature",
-    definition: "When the audience knows something that the characters do not.",
-    use: "Creates tension, humour, or tragedy in drama."
-  },
-  {
-    term: "Ellipsis",
-    category: "Grammar",
-    definition: "Three dots used to mark omission or trailing thought.",
-    use: "Often suggests pause, hesitation, or incompleteness."
-  },
-  {
-    term: "Emotional blackmail",
-    category: "Visual",
-    definition: "Persuasion that tries to force agreement through guilt or shame.",
-    use: "Very common in propaganda or moral advertising."
-  },
-  {
-    term: "Emotive language",
-    category: "Language",
-    definition: "Words chosen to trigger strong feelings.",
-    use: "Often aims to persuade rather than merely inform."
-  },
-  {
-    term: "Emanata",
-    category: "Visual",
-    definition: "Small drawn marks showing movement, emotion, or energy in cartoons.",
-    use: "Helps communicate feeling quickly without long explanation."
-  },
-  {
-    term: "Endorsement",
-    category: "Visual",
-    definition: "Support from a recognised or respected figure.",
-    use: "Adds authority and can pressure the audience to agree."
-  },
-  {
-    term: "End-stopped line",
-    category: "Literature",
-    definition: "A poetic line that ends with clear punctuation.",
-    use: "Creates closure, control, or firmness."
-  },
-  {
-    term: "Enjambment",
-    category: "Literature",
-    definition: "When a sentence continues beyond the end of a line.",
-    use: "Can speed the poem up or create overflow and tension."
-  },
-  {
-    term: "Evidence",
-    category: "Argument",
-    definition: "The detail from the text that supports a claim.",
-    use: "Evidence only works if it is followed by analysis."
-  },
-  {
-    term: "Evaluation",
-    category: "Argument",
-    definition: "Judging how effective or significant a choice is.",
-    use: "Useful in conclusions and oral comments on success."
-  },
-  {
-    term: "Euphemism",
-    category: "Language",
-    definition: "A softer expression used in place of something harsher.",
-    use: "Can hide discomfort or make a topic seem more acceptable."
-  },
-  {
-    term: "Exclamation mark",
-    category: "Grammar",
-    definition: "Punctuation used to signal emphasis, force, or emotional intensity.",
-    use: "Can make language feel urgent, dramatic, or exaggerated."
-  },
-  {
-    term: "Expletive",
-    category: "Language",
-    definition: "A swear word or forceful outburst.",
-    use: "Usually worth analysing for shock, anger, or register."
-  },
-  {
-    term: "Field of inquiry",
-    category: "Oral & IO",
-    definition: "A broad conceptual area used to frame a global issue.",
-    use: "Helps make the IO more precise and organised."
-  },
-  {
-    term: "Figurative language",
-    category: "Language",
-    definition: "Language that goes beyond literal meaning.",
-    use: "Includes devices like metaphor, simile, and personification."
-  },
-  {
-    term: "First person",
-    category: "Grammar",
-    definition: "A voice using I, me, or my.",
-    use: "Often feels personal, intimate, or confessional."
-  },
-  {
-    term: "Foreshadowing",
-    category: "Literature",
-    definition: "A clue that hints at what will happen later.",
-    use: "Builds expectation, tension, or tragic inevitability."
-  },
-  {
-    term: "Foreground",
-    category: "Visual",
-    definition: "The front part of an image, closest to the viewer.",
-    use: "Often contains the most immediate visual information."
-  },
-  {
-    term: "Framing",
-    category: "Visual",
-    definition: "The way subjects are placed within the borders of an image.",
-    use: "Shapes focus, isolation, and perspective."
-  },
-  {
-    term: "Global issue",
-    category: "Oral & IO",
-    definition: "A broad issue with real significance across nations and contexts.",
-    use: "The IO needs a global issue that genuinely fits both texts."
-  },
-  {
-    term: "Graphic weight",
-    category: "Visual",
-    definition: "The visual heaviness created by dark lines, bold shapes, or dense detail.",
-    use: "Helps explain why one part of an image stands out more than another."
-  },
-  {
-    term: "Gutter",
-    category: "Visual",
-    definition: "The space between comic or cartoon panels.",
-    use: "Can shape pacing and what the viewer imagines between scenes."
-  },
-  {
-    term: "Hyperbole",
-    category: "Language",
-    definition: "Deliberate exaggeration for effect.",
-    use: "Useful for analysing emotional intensity, humour, or irony."
-  },
-  {
-    term: "Iambic pentameter",
-    category: "Literature",
-    definition: "A line of ten syllables following an unstressed-stressed pattern.",
-    use: "Common in Shakespeare and useful for discussing rhythm."
-  },
-  {
-    term: "Iconography",
-    category: "Visual",
-    definition: "Images or symbols that carry recognisable cultural meaning.",
-    use: "Helps explain why viewers understand a symbol so quickly."
-  },
-  {
-    term: "Idiom",
-    category: "Language",
-    definition: "A fixed expression whose meaning is not fully literal.",
-    use: "Shows natural speech, cultural voice, or familiar phrasing."
-  },
-  {
-    term: "Imagery",
-    category: "Language",
-    definition: "Descriptive language that creates sensory or mental pictures.",
-    use: "Useful for poems, songs, and vivid prose."
-  },
-  {
-    term: "Imperative verb",
-    category: "Grammar",
-    definition: "A command form of a verb.",
-    use: "Can sound forceful, persuasive, or controlling."
-  },
-  {
-    term: "Inference",
-    category: "Argument",
-    definition: "A logical conclusion drawn from evidence rather than stated directly.",
-    use: "Strong analysis depends on reasonable inference, not random guessing."
-  },
-  {
-    term: "Interrogative sentence",
-    category: "Grammar",
-    definition: "A sentence asked as a question.",
-    use: "Can invite thought, challenge the audience, or pressure agreement."
-  },
-  {
-    term: "Interpretation",
-    category: "Argument",
-    definition: "An explanation of what a detail means or suggests.",
-    use: "Turns evidence into an argument."
-  },
-  {
-    term: "Irony",
-    category: "Language",
-    definition: "A contrast between what seems to be said and what is really meant or shown.",
-    use: "Can create humour, criticism, or discomfort."
-  },
-  {
-    term: "Juxtaposition",
-    category: "Language",
-    definition: "Placing two contrasting things close together.",
-    use: "Sharpens difference and often drives the main message."
-  },
-  {
-    term: "Label",
-    category: "Visual",
-    definition: "Words placed directly inside an image to identify or satirise a subject.",
-    use: "Common in political cartoons to make symbolism obvious."
-  },
-  {
-    term: "Layout",
-    category: "Visual",
-    definition: "The overall arrangement of text and images on a page.",
-    use: "Useful for explaining order, readability, and emphasis."
-  },
-  {
-    term: "Lexical field",
-    category: "Language",
-    definition: "A set of words linked by a shared topic or idea.",
-    use: "Shows how repeated vocabulary creates a pattern."
-  },
-  {
-    term: "Line of argument",
-    category: "Argument",
-    definition: "The logical progression of an essay or oral response.",
-    use: "Keeps ideas connected instead of sounding random."
-  },
-  {
-    term: "Message",
-    category: "Argument",
-    definition: "The main idea or claim a text communicates.",
-    use: "Every paragraph should link back to it."
-  },
-  {
-    term: "Metaphor",
-    category: "Language",
-    definition: "A comparison made by saying one thing is another.",
-    use: "Can condense complex emotion or thought into one image."
-  },
-  {
-    term: "Minor sentence",
-    category: "Grammar",
-    definition: "A very short sentence or sentence fragment used for effect.",
-    use: "Can feel punchy, abrupt, or dramatic."
-  },
-  {
-    term: "Modal verb",
-    category: "Grammar",
-    definition: "A verb such as might, must, should, or could that shows degree or certainty.",
-    use: "Useful for analysing pressure, obligation, or possibility."
-  },
-  {
-    term: "Monologue",
-    category: "Literature",
-    definition: "A long speech by one character.",
-    use: "Can reveal personality, conflict, or emotional state."
-  },
-  {
-    term: "Mood",
-    category: "Literature",
-    definition: "The feeling created in the audience.",
-    use: "Different from tone, which belongs to the speaker or writer."
-  },
-  {
-    term: "Motif",
-    category: "Language",
-    definition: "A recurring image, phrase, or idea in a text.",
-    use: "Often helps unify a theme across the whole work."
-  },
-  {
-    term: "Narrator",
-    category: "Literature",
-    definition: "The voice that tells a story.",
-    use: "Useful when discussing viewpoint, reliability, or distance."
-  },
-  {
-    term: "Negative space",
-    category: "Visual",
-    definition: "The empty area around the main subject.",
-    use: "Can create focus, clarity, or emotional isolation."
-  },
-  {
-    term: "Noun phrase",
-    category: "Grammar",
-    definition: "A group of words built around a noun.",
-    use: "Helps when analysing compressed description or emphasis."
-  },
-  {
-    term: "Onomatopoeia",
-    category: "Language",
-    definition: "A word that imitates a sound.",
-    use: "Useful when sound itself becomes part of meaning."
-  },
-  {
-    term: "Oxymoron",
-    category: "Language",
-    definition: "Two contradictory words placed together.",
-    use: "Highlights tension, conflict, or emotional complexity."
-  },
-  {
-    term: "Panel",
-    category: "Visual",
-    definition: "A single framed image in a comic or cartoon sequence.",
-    use: "Panels control pacing, progression, and contrast."
-  },
-  {
-    term: "Paradox",
-    category: "Language",
-    definition: "An apparently contradictory statement that reveals a truth.",
-    use: "Useful for complex ideas that resist simple logic."
-  },
-  {
-    term: "Parentheses",
-    category: "Grammar",
-    definition: "Brackets used to insert extra material into a sentence.",
-    use: "Can create side comments, qualification, or a shift in tone."
-  },
-  {
-    term: "Passive voice",
-    category: "Grammar",
-    definition: "A sentence structure where the action is done to the subject.",
-    use: "Can hide responsibility or create distance."
-  },
-  {
-    term: "Peer pressure appeal",
-    category: "Visual",
-    definition: "Persuasion based on the idea that everyone else is already involved.",
-    use: "Common in propaganda and social advertising."
-  },
-  {
-    term: "Persona",
-    category: "Literature",
-    definition: "A speaking voice or character created by the writer.",
-    use: "Important because the speaker is not always the writer."
-  },
-  {
-    term: "Perspective (argument)",
-    category: "Argument",
-    definition: "The viewpoint from which a person or issue is presented.",
-    use: "Helpful when comparing how texts frame the same concern differently."
-  },
-  {
-    term: "Personification",
-    category: "Language",
-    definition: "Giving human qualities to something non-human.",
-    use: "Can make an abstract idea feel vivid or alive."
-  },
-  {
-    term: "Pronoun",
-    category: "Grammar",
-    definition: "A word such as I, we, you, he, she, or they used in place of a noun.",
-    use: "Pronoun choices can shape intimacy, distance, or blame."
-  },
-  {
-    term: "Proportion",
-    category: "Visual",
-    definition: "The size relationship between parts of an image.",
-    use: "Exaggerated proportion can create humour or criticism."
-  },
-  {
-    term: "Purpose",
-    category: "Argument",
-    definition: "The reason a text was created.",
-    use: "Often connects to persuading, informing, challenging, or entertaining."
-  },
-  {
-    term: "Pun",
-    category: "Language",
-    definition: "A play on words based on double meaning or sound similarity.",
-    use: "Can make a message memorable or humorous."
-  },
-  {
-    term: "Reader positioning",
-    category: "Argument",
-    definition: "The way a text guides the audience toward a particular response.",
-    use: "A strong phrase for higher-level analysis."
-  },
-  {
-    term: "Refrain",
-    category: "Literature",
-    definition: "A repeated line or phrase, often in songs and poems.",
-    use: "Creates emphasis, structure, and emotional return."
-  },
-  {
-    term: "Register",
-    category: "Language",
-    definition: "The level of formality or informality in language.",
-    use: "Useful when discussing slang, demotic voice, or official tone."
-  },
-  {
-    term: "Repetition",
-    category: "Language",
-    definition: "Deliberate reuse of words, sounds, structures, or ideas.",
-    use: "Often signals importance or emotional pressure."
-  },
-  {
-    term: "Rhetorical question",
-    category: "Language",
-    definition: "A question asked for effect rather than a real answer.",
-    use: "Can challenge, provoke, or pressure the audience."
-  },
-  {
-    term: "Rule of thirds",
-    category: "Visual",
-    definition: "A composition guide that divides an image into a three-by-three grid.",
-    use: "Helps explain why a picture feels balanced or carefully focused."
-  },
-  {
-    term: "Salience",
-    category: "Visual",
-    definition: "The feature that stands out most strongly in an image.",
-    use: "Useful for explaining what the viewer notices first."
-  },
-  {
-    term: "Scale",
-    category: "Visual",
-    definition: "The size of elements in relation to each other or to the frame.",
-    use: "Can suggest importance, pressure, or insignificance."
-  },
-  {
-    term: "Semantic field",
-    category: "Language",
+  { term: "Active voice", category: "Grammar",
+    definition: "The subject does the action: \"the crowd cheered\", not \"cheers came from the crowd\".",
+    note: "Passive is the interesting one to spot. Active is just the default." },
+  { term: "Adjective", category: "Grammar",
+    definition: "A describing word attached to a noun.",
+    note: "Only worth mentioning when the choice is odd or loaded." },
+  { term: "Adverb", category: "Grammar",
+    definition: "Modifies a verb or adjective — how, when, how often, how much." },
+  { term: "Analysis", category: "Argument",
+    definition: "Explaining how a specific choice creates meaning, rather than just naming or describing it.",
+    note: "The gap between \"the poster uses red\" and \"the red frames the product as urgent\"." },
+  { term: "Alliteration", category: "Language",
+    definition: "Repeated consonant sounds at the starts of nearby words.",
+    note: "Slogans love it. Say what the sound is doing, or it's just spotting." },
+  { term: "Allusion", category: "Language",
+    definition: "An indirect reference to another text, event or cultural idea.",
+    note: "Borrowed meaning — the text imports everything the reference already carries." },
+  { term: "Ambiguity", category: "Language",
+    definition: "Wording that genuinely supports more than one reading.",
+    note: "Give both readings, then commit to the stronger one. Don't sit on the fence." },
+  { term: "Anaphora", category: "Language",
+    definition: "Starting successive lines or clauses with the same words.",
+    note: "The Smiths use it to build obsession — the same plea circling back again and again." },
+  { term: "Angle", category: "Visual",
+    definition: "Where the camera or artist places the viewer relative to the subject.",
+    note: "Low angle means power, high angle means vulnerability. Almost suspiciously reliable." },
+  { term: "Antithesis", category: "Language",
+    definition: "Two opposed ideas set against each other in balanced phrasing." },
+  { term: "Aside", category: "Literature",
+    definition: "A line spoken to the audience that the other characters on stage can't hear.",
+    note: "Instant dramatic irony — we know, they don't." },
+  { term: "Assonance", category: "Language",
+    definition: "Repeated vowel sounds inside nearby words.",
+    note: "I mix this up with alliteration under time pressure. Vowels = assonance." },
+  { term: "Audience", category: "Argument",
+    definition: "Whoever the text is actually built for.",
+    note: "Every paragraph should land on what the choice does to them." },
+  { term: "Authorial intent", category: "Argument",
+    definition: "What the writer seems to want the audience to think, feel or question.",
+    note: "Keep the word \"seems\" — I can argue intent, I can't read minds." },
+  { term: "Background", category: "Visual",
+    definition: "Whatever sits behind the main subject.",
+    note: "In the newspaper-dress photo the bare background is the point: nothing distracts from the material." },
+  { term: "Blank verse", category: "Literature",
+    definition: "Unrhymed lines in iambic pentameter.",
+    note: "Shakespeare's default setting for high-status speech." },
+  { term: "Bleed", category: "Visual",
+    definition: "When an image runs off the edge of the frame with no border.",
+    note: "Makes a cartoon feel like it doesn't stop at the page." },
+  { term: "Body of work", category: "Oral & IO",
+    definition: "Several related non-literary texts by the same creator.",
+    note: "One Donnelly cartoon is an example. Five are a body of work. The IO needs the second." },
+  { term: "Call to action", category: "Visual",
+    definition: "The line that tells the audience exactly what to do next.",
+    note: "A recruitment poster is basically one giant call to action with art around it." },
+  { term: "Caption", category: "Visual",
+    definition: "The written line under or inside an image.",
+    note: "In Donnelly the caption usually delivers the punch — the drawing just sets it up." },
+  { term: "Caricature", category: "Visual",
+    definition: "Exaggerating someone's features to make a point about them." },
+  { term: "Caesura", category: "Literature",
+    definition: "A pause in the middle of a line, usually made by punctuation.",
+    note: "In Larkin it can sound like a thought stopping short of hope." },
+  { term: "Claim", category: "Argument",
+    definition: "An arguable point that evidence can support.",
+    note: "If nobody could possibly disagree with it, it isn't a claim." },
+  { term: "Clause", category: "Grammar",
+    definition: "A unit of language with its own subject and verb." },
+  { term: "Cliche", category: "Language",
+    definition: "A phrase so overused it has stopped meaning anything.",
+    note: "Banned from my essays. Also banned: \"paints a picture\"." },
+  { term: "Colloquial language", category: "Language",
+    definition: "Casual, everyday speech showing up in print.",
+    note: "Creates closeness — or quietly marks a character as ordinary." },
+  { term: "Colour palette", category: "Visual",
+    definition: "The overall range of colours an image commits to.",
+    note: "Name the mood it builds before listing the colours." },
+  { term: "Comparative thesis", category: "Argument",
+    definition: "One argument covering how both texts treat the same idea.",
+    note: "Paper 2 lives or dies here. Write it before anything else." },
+  { term: "Composition", category: "Visual",
+    definition: "How everything in the frame is arranged.",
+    note: "My first stop with any poster: what did they put where, and why there." },
+  { term: "Connotation", category: "Language",
+    definition: "What a word suggests beyond its literal meaning.",
+    note: "\"Childish\" vs \"childlike\" — same denotation, opposite verdicts." },
+  { term: "Contraction", category: "Grammar",
+    definition: "Shortened forms like can't and I'm.",
+    note: "Makes a written voice sound spoken." },
+  { term: "Context", category: "Argument",
+    definition: "The circumstances around a text — social, historical, cultural.",
+    note: "Seasoning, not the meal. The text itself stays central." },
+  { term: "Contrast", category: "Visual",
+    definition: "A strong difference the text forces you to notice.",
+    note: "The golf ad is pure contrast: relaxed swing, brutal object." },
+  { term: "Critique", category: "Argument",
+    definition: "When a text challenges an idea or system instead of just showing it.",
+    note: "Upgrades my verbs: the text critiques something, it doesn't \"talk about\" it." },
+  { term: "Crop", category: "Visual",
+    definition: "What the frame deliberately cuts out.",
+    note: "What's missing can matter more than what's there." },
+  { term: "Dash", category: "Grammar",
+    definition: "The punctuation of interruption — or a sudden change of direction." },
+  { term: "Declarative sentence", category: "Grammar",
+    definition: "A plain statement of fact or belief.",
+    note: "A run of them can sound like someone refusing to argue." },
+  { term: "Demotic language", category: "Language",
+    definition: "Ordinary, street-level speech.",
+    note: "Larkin drops into it on purpose — the flatness is the weapon." },
+  { term: "Depth of field", category: "Visual",
+    definition: "How much of the image stays in focus from front to back.",
+    note: "A blurred background means the photographer chose your focal point for you." },
+  { term: "Dialogue", category: "Literature",
+    definition: "Characters talking to each other.",
+    note: "Watch who interrupts whom — it tells you who holds the power." },
+  { term: "Diction", category: "Language",
+    definition: "The writer's word choices.",
+    note: "Fastest route to tone. When I'm stuck, I start here." },
+  { term: "Direct gaze", category: "Visual",
+    definition: "The subject looks straight out at the viewer.",
+    note: "Recruitment posters weaponise it — you, specifically, are being asked." },
+  { term: "Dramatic irony", category: "Literature",
+    definition: "The audience knows something a character doesn't.",
+    note: "Romeo and Juliet runs on it: the prologue hands us the ending, then makes us watch." },
+  { term: "Ellipsis", category: "Grammar",
+    definition: "Three dots marking something left unsaid...",
+    note: "Trailing off, hesitation, or a threat — depends entirely on the tone around it." },
+  { term: "Emotional blackmail", category: "Visual",
+    definition: "Persuasion that works through guilt or shame.",
+    note: "The WW1 posters that have children ask their fathers what they did in the war. Vicious, and effective." },
+  { term: "Emotive language", category: "Language",
+    definition: "Words picked to make you feel before you think.",
+    note: "Duty, glory, sacrifice — the recruitment poster starter pack." },
+  { term: "Emanata", category: "Visual",
+    definition: "The little cartoon marks for motion or feeling — sweat drops, radiating lines." },
+  { term: "Endorsement", category: "Visual",
+    definition: "A respected figure lending their authority to the message." },
+  { term: "End-stopped line", category: "Literature",
+    definition: "A poetic line that closes with punctuation.",
+    note: "Control and finality. Pairs neatly with enjambment for a structure point." },
+  { term: "Enjambment", category: "Literature",
+    definition: "The sentence spills past the end of the line.",
+    note: "Overflow, momentum, a thought that won't be contained by the form." },
+  { term: "Evidence", category: "Argument",
+    definition: "The actual words or details my point is built on.",
+    note: "Short quotes only. If I'm quoting three lines, I'm hiding, not arguing." },
+  { term: "Evaluation", category: "Argument",
+    definition: "Judging how well a choice works, not just describing what it does.",
+    note: "The word teachers keep writing in my margins. There's a reason." },
+  { term: "Euphemism", category: "Language",
+    definition: "A soft phrase laid over a hard truth.",
+    note: "\"Collateral damage.\" Ask what's being hidden and who benefits from the hiding." },
+  { term: "Exclamation mark", category: "Grammar",
+    definition: "Emphasis, force, volume.",
+    note: "In propaganda it's essentially shouting." },
+  { term: "Expletive", category: "Language",
+    definition: "Swearing, or a sudden forceful outburst.",
+    note: "Analyse the register shift; don't just note that it's rude." },
+  { term: "Field of inquiry", category: "Oral & IO",
+    definition: "The broad territory a global issue sits inside — politics, identity, culture.",
+    note: "Pick the field first, then sharpen it into an actual issue." },
+  { term: "Figurative language", category: "Language",
+    definition: "Anything not meant literally.",
+    note: "Umbrella term. Name the specific device whenever I can." },
+  { term: "First person", category: "Grammar",
+    definition: "I, me, my.",
+    note: "Confessional by default. The Smiths never leave it." },
+  { term: "Foreshadowing", category: "Literature",
+    definition: "An early hint of what's coming later." },
+  { term: "Foreground", category: "Visual",
+    definition: "The front of the image, nearest the viewer.",
+    note: "Front versus back is often the whole social argument of a photograph." },
+  { term: "Framing", category: "Visual",
+    definition: "Where the borders fall and what they trap inside.",
+    note: "A figure alone in a wide frame reads as isolated before you've noticed anything else." },
+  { term: "Global issue", category: "Oral & IO",
+    definition: "An issue with real weight across countries and cultures — the spine of the IO.",
+    note: "The test: does it genuinely live in both texts, or am I forcing it?" },
+  { term: "Graphic weight", category: "Visual",
+    definition: "How heavily an element pulls the eye — dark lines, bold shapes, dense detail." },
+  { term: "Gutter", category: "Visual",
+    definition: "The gap between comic panels.",
+    note: "The reader fills it in themselves — and what's imagined is often worse than what's drawn." },
+  { term: "Hyperbole", category: "Language",
+    definition: "Deliberate exaggeration.",
+    note: "In the Smiths the exaggeration is the emotional truth — the speaker means every word of it." },
+  { term: "Iambic pentameter", category: "Literature",
+    definition: "Ten syllables, unstressed then stressed, five times per line.",
+    note: "When Shakespeare breaks the rhythm, that's exactly where to look." },
+  { term: "Iconography", category: "Visual",
+    definition: "Symbols a culture reads instantly.",
+    note: "Poppies, doves, skulls. No caption needed — which is the whole power of it." },
+  { term: "Idiom", category: "Language",
+    definition: "A fixed phrase that doesn't mean its literal words." },
+  { term: "Imagery", category: "Language",
+    definition: "Language that makes you see, hear or feel the thing.",
+    note: "Say which sense and what it triggers. \"Vivid imagery\" on its own is filler." },
+  { term: "Imperative verb", category: "Grammar",
+    definition: "A command: go, stop, buy, enlist.",
+    note: "The baby cartoon is a whole list of them — orders dressed up as advice." },
+  { term: "Inference", category: "Argument",
+    definition: "A conclusion the evidence supports without stating it outright.",
+    note: "Reasonable inference is a skill. Guessing someone's motives is fan fiction." },
+  { term: "Interrogative sentence", category: "Grammar",
+    definition: "A sentence in the form of a question." },
+  { term: "Interpretation", category: "Argument",
+    definition: "My reading of what a detail means.",
+    note: "Turns evidence into argument. This is where the marks actually live." },
+  { term: "Irony", category: "Language",
+    definition: "The gap between what's said or shown and what's actually meant.",
+    note: "The golfer's calm smile is the irony. The axe just makes it visible." },
+  { term: "Juxtaposition", category: "Language",
+    definition: "Two contrasting things placed right next to each other.",
+    note: "Probably my most-used word in visual analysis. Should branch out." },
+  { term: "Label", category: "Visual",
+    definition: "Words written inside a cartoon naming what things stand for.",
+    note: "Political cartoons use them so the symbolism can't be missed." },
+  { term: "Layout", category: "Visual",
+    definition: "Where text and images sit on the page." },
+  { term: "Lexical field", category: "Language",
+    definition: "A cluster of words drawn from the same topic.",
+    note: "Three war words in a love poem is an actual finding. Say so." },
+  { term: "Line of argument", category: "Argument",
+    definition: "The through-line of an essay — each point building on the last.",
+    note: "If my paragraphs could be shuffled without anyone noticing, I don't have one." },
+  { term: "Message", category: "Argument",
+    definition: "The idea the text wants to leave you holding.",
+    note: "Every paragraph links back here, or it's decoration." },
+  { term: "Metaphor", category: "Language",
+    definition: "Saying one thing is another thing.",
+    note: "Compresses a whole feeling into a single image. Unpack the image, not just the label." },
+  { term: "Minor sentence", category: "Grammar",
+    definition: "A fragment used deliberately. Like this.",
+    note: "Punchy, abrupt, final. Best kept rare." },
+  { term: "Modal verb", category: "Grammar",
+    definition: "Might, must, should, could — the verbs of certainty and obligation.",
+    note: "A \"must\" on a poster is doing political work." },
+  { term: "Monologue", category: "Literature",
+    definition: "One character speaking at length." },
+  { term: "Mood", category: "Literature",
+    definition: "What the audience is made to feel.",
+    note: "Tone belongs to the writer; mood belongs to us. I have to keep re-learning this." },
+  { term: "Motif", category: "Language",
+    definition: "An image or idea that keeps returning through the text.",
+    note: "Light, in the song of the same name — track it through the verses and the analysis writes itself." },
+  { term: "Narrator", category: "Literature",
+    definition: "The voice telling the story.",
+    note: "Never assume it's the author. Sometimes it isn't even honest." },
+  { term: "Negative space", category: "Visual",
+    definition: "The emptiness around the subject.",
+    note: "The Chupa Chups ad is mostly empty. The emptiness is the joke." },
+  { term: "Noun phrase", category: "Grammar",
+    definition: "A noun plus the cluster of words modifying it." },
+  { term: "Onomatopoeia", category: "Language",
+    definition: "Words that sound like the thing they mean." },
+  { term: "Oxymoron", category: "Language",
+    definition: "Two contradictory words jammed together.",
+    note: "Romeo's whole opening act — love described as violent contradiction." },
+  { term: "Panel", category: "Visual",
+    definition: "One frame of a comic sequence." },
+  { term: "Paradox", category: "Language",
+    definition: "A contradiction that turns out to hold a truth." },
+  { term: "Parentheses", category: "Grammar",
+    definition: "Brackets tucking an extra thought into a sentence (like this).",
+    note: "Reads as a whisper, a wink, or an afterthought." },
+  { term: "Passive voice", category: "Grammar",
+    definition: "The action happens to the subject — and the doer can quietly vanish.",
+    note: "\"Mistakes were made.\" By whom? Exactly. That question is the analysis." },
+  { term: "Peer pressure appeal", category: "Visual",
+    definition: "Everyone else is already doing it, so you should too.",
+    note: "WW1 posters aimed it at men watching their friends enlist without them." },
+  { term: "Persona", category: "Literature",
+    definition: "The constructed speaker — a mask the writer performs through.",
+    note: "The voice in a Smiths song is a character, not a biography. Analyse the mask." },
+  { term: "Perspective (argument)", category: "Argument",
+    definition: "The position a text views an issue from." },
+  { term: "Personification", category: "Language",
+    definition: "Giving human qualities to something non-human." },
+  { term: "Pronoun", category: "Grammar",
+    definition: "I, we, you, they — small words with big allegiances.",
+    note: "\"We\" recruits the reader. \"They\" builds the wall." },
+  { term: "Proportion", category: "Visual",
+    definition: "The relative sizes of things inside the image.",
+    note: "The WeightWatchers doors say everything through proportion alone." },
+  { term: "Purpose", category: "Argument",
+    definition: "Why the text exists at all.",
+    note: "Usually a blend — persuade, inform, provoke, sell. Name the dominant one." },
+  { term: "Pun", category: "Language",
+    definition: "Wordplay built on a double meaning or a sound." },
+  { term: "Reader positioning", category: "Argument",
+    definition: "How the text manoeuvres you into a particular viewpoint.",
+    note: "The phrase that reliably lifts my analysis a level. Use it." },
+  { term: "Refrain", category: "Literature",
+    definition: "The line that keeps coming back, usually in songs.",
+    note: "Each return should mean slightly more than the last. Track the change." },
+  { term: "Register", category: "Language",
+    definition: "How formal or informal the language is.",
+    note: "A register drop mid-text is always deliberate. Ask why it happens there." },
+  { term: "Repetition", category: "Language",
+    definition: "Saying it again, on purpose.",
+    note: "Name the type where possible — anaphora, refrain, motif — then the effect." },
+  { term: "Rhetorical question", category: "Language",
+    definition: "A question that isn't really asking.",
+    note: "The answer comes pre-loaded. That's the manipulation." },
+  { term: "Rule of thirds", category: "Visual",
+    definition: "A composition grid — subjects sit on the lines, not dead centre." },
+  { term: "Salience", category: "Visual",
+    definition: "Whatever your eye hits first.",
+    note: "Start the poster paragraph here. Always." },
+  { term: "Scale", category: "Visual",
+    definition: "Size relative to the frame or to other elements.",
+    note: "Cartoonists shrink politicians for a reason." },
+  { term: "Semantic field", category: "Language",
     definition: "A set of words connected by shared meaning.",
-    use: "Like lexical field, it helps track patterns of vocabulary."
-  },
-  {
-    term: "Semicolon",
-    category: "Grammar",
-    definition: "A punctuation mark linking closely related clauses.",
-    use: "Can create balance, tension, or controlled pacing."
-  },
-  {
-    term: "Setting",
-    category: "Visual",
-    definition: "The place or environment in which a scene occurs.",
-    use: "Often helps reveal context, mood, or social message."
-  },
-  {
-    term: "Significance",
-    category: "Argument",
-    definition: "Why a detail or idea matters in the wider text.",
-    use: "Pushes analysis from observation to importance."
-  },
-  {
-    term: "Simile",
-    category: "Language",
+    note: "Basically interchangeable with lexical field — pick one per essay and stay consistent." },
+  { term: "Semicolon", category: "Grammar",
+    definition: "Links two clauses that belong together; heavier than a comma, lighter than a full stop." },
+  { term: "Setting", category: "Visual",
+    definition: "The place or environment a scene happens in." },
+  { term: "Significance", category: "Argument",
+    definition: "Why the detail matters to the whole text.",
+    note: "The \"so what?\" test. Every paragraph has to survive it." },
+  { term: "Simile", category: "Language",
     definition: "A comparison using like or as.",
-    use: "Can make an abstract feeling more concrete."
-  },
-  {
-    term: "Slang",
-    category: "Language",
-    definition: "Highly informal language linked to a specific group or setting.",
-    use: "Usually better to identify it than to imitate it in formal analysis."
-  },
-  {
-    term: "Slogan",
-    category: "Visual",
-    definition: "A short memorable phrase used to sell or persuade.",
-    use: "Often carries the main message of an advert or poster."
-  },
-  {
-    term: "Soliloquy",
-    category: "Literature",
-    definition: "A speech in which a character speaks thoughts aloud while alone.",
-    use: "Reveals inner conflict directly to the audience."
-  },
-  {
-    term: "Speaker",
-    category: "Literature",
-    definition: "The voice speaking in a poem or lyric.",
-    use: "Not always the same as the writer."
-  },
-  {
-    term: "Speech bubble",
-    category: "Visual",
-    definition: "A graphic shape containing spoken dialogue in a cartoon or comic.",
-    use: "Helps show tone, pace, and the relationship between text and image."
-  },
-  {
-    term: "Stanza",
-    category: "Literature",
-    definition: "A grouped section of lines in a poem.",
-    use: "Useful when discussing structure, shifts, and pacing."
-  },
-  {
-    term: "Structure",
-    category: "Argument",
-    definition: "The way a text is organised overall.",
-    use: "Can refer to stanza order, paragraph order, narrative order, or sequence."
-  },
-  {
-    term: "Symbolism",
-    category: "Language",
-    definition: "When an object, colour, image, or detail represents a larger idea.",
-    use: "Useful in both literature and visual analysis."
-  },
-  {
-    term: "Synthesis",
-    category: "Argument",
-    definition: "Bringing ideas together to show how they connect.",
-    use: "Important in conclusions and comparative writing."
-  },
-  {
-    term: "Syntax",
-    category: "Grammar",
-    definition: "The arrangement of words and phrases in a sentence.",
-    use: "Helps explain pace, tension, and emphasis."
-  },
-  {
-    term: "Target audience",
-    category: "Visual",
-    definition: "The group a text is mainly aimed at.",
-    use: "Essential for adverts, posters, and speeches."
-  },
-  {
-    term: "Theme",
-    category: "Literature",
-    definition: "The central idea or concern running through a text.",
-    use: "Different from topic because it suggests a deeper message."
-  },
-  {
-    term: "Thesis",
-    category: "Argument",
-    definition: "The main argument of an essay or oral response.",
-    use: "A good thesis is clear, arguable, and specific."
-  },
-  {
-    term: "Tone",
-    category: "Language",
-    definition: "The attitude expressed by the speaker, writer, or creator.",
-    use: "Can be tender, bitter, playful, accusatory, or many other things."
-  },
-  {
-    term: "Transnational",
-    category: "Oral & IO",
-    definition: "Relevant across more than one country or culture.",
-    use: "A useful test for whether a global issue is broad enough."
-  },
-  {
-    term: "Tricolon",
-    category: "Language",
-    definition: "A pattern of three parallel words, phrases, or clauses.",
-    use: "Often sounds complete, persuasive, or memorable."
-  },
-  {
-    term: "Typography",
-    category: "Visual",
-    definition: "The visual styling of written text, including font, size, and spacing.",
-    use: "Important in poster, advert, and magazine analysis."
-  },
-  {
-    term: "Understatement",
-    category: "Language",
-    definition: "Deliberately presenting something as smaller or less intense than it is.",
-    use: "Can create irony, restraint, or dark humour."
-  },
-  {
-    term: "Verb",
-    category: "Grammar",
-    definition: "A word that expresses action, being, or state.",
-    use: "Precise verb choice often reveals tone and energy."
-  },
-  {
-    term: "Visual hierarchy",
-    category: "Visual",
-    definition: "The order in which the eye is guided through a layout.",
-    use: "Useful when analysing posters, websites, and adverts."
-  },
-  {
-    term: "Visual pun",
-    category: "Visual",
-    definition: "A joke or double meaning created through imagery.",
-    use: "Common in advertising because it makes the message stick."
-  },
-  {
-    term: "Volta",
-    category: "Literature",
-    definition: "A turn or shift in thought, tone, or argument within a poem.",
-    use: "Important when a text changes direction."
-  },
-  {
-    term: "Zoom in",
-    category: "Oral & IO",
-    definition: "Close analysis of a small detail such as a word, phrase, or image.",
-    use: "Helps prove the argument with precision."
-  },
-  {
-    term: "Zoom out",
-    category: "Oral & IO",
-    definition: "Stepping back to connect a detail to the whole text or wider issue.",
-    use: "Prevents analysis from becoming too narrow."
-  },
-  {
-    term: "Brand identity",
-    category: "Visual",
-    definition: "The recognisable personality or image a brand creates.",
-    use: "Useful when analysing consistent colour, tone, and style in adverts."
-  },
-  {
-    term: "Colon",
-    category: "Grammar",
-    definition: "A punctuation mark used to introduce explanation, list, or emphasis.",
-    use: "Can make writing feel structured and deliberate."
-  },
-  {
-    term: "Comma",
-    category: "Grammar",
-    definition: "A punctuation mark used for pause, separation, or rhythm.",
-    use: "Useful when discussing pace and flow."
-  },
-  {
-    term: "Denotation",
-    category: "Language",
-    definition: "The literal dictionary meaning of a word.",
-    use: "Helpful when contrasting literal meaning with connotation."
-  },
-  {
-    term: "Free verse",
-    category: "Literature",
-    definition: "Poetry without a fixed regular meter or rhyme scheme.",
-    use: "Can create freedom, unpredictability, or natural speech."
-  },
-  {
-    term: "Full stop",
-    category: "Grammar",
-    definition: "Punctuation marking the end of a complete sentence.",
-    use: "Short full-stop sentences can feel abrupt or forceful."
-  },
-  {
-    term: "Grid layout",
-    category: "Visual",
-    definition: "A structured arrangement based on columns and rows.",
-    use: "Can make a design feel organised, controlled, or mechanical."
-  },
-  {
-    term: "Hook",
-    category: "Argument",
-    definition: "An opening line designed to catch interest quickly.",
-    use: "Useful in speeches and oral introductions."
-  },
-  {
-    term: "Internal rhyme",
-    category: "Literature",
-    definition: "Rhyme occurring within a single line rather than at line endings.",
-    use: "Can add musicality without obvious end rhyme."
-  },
-  {
-    term: "Logo",
-    category: "Visual",
-    definition: "A visual mark used to identify a brand or organisation.",
-    use: "Can carry authority, familiarity, and trust."
-  },
-  {
-    term: "Meter",
-    category: "Literature",
-    definition: "The patterned rhythm of stressed and unstressed syllables.",
-    use: "Helps explain sound, movement, and control in poetry."
-  },
-  {
-    term: "Parallelism",
-    category: "Language",
-    definition: "Using similar grammatical structures in a repeated pattern.",
-    use: "Creates balance, rhythm, and persuasive force."
-  },
-  {
-    term: "Perspective (visual)",
-    category: "Visual",
-    definition: "The visual or conceptual point of view built into an image.",
-    use: "Useful when discussing who has power or distance in a frame."
-  },
-  {
-    term: "Question mark",
-    category: "Grammar",
-    definition: "Punctuation used to mark a direct question.",
-    use: "Can signal uncertainty, challenge, or persuasion."
-  },
-  {
-    term: "Second person",
-    category: "Grammar",
-    definition: "A voice using you and your.",
-    use: "Often feels direct and can pull the audience into the text."
-  },
-  {
-    term: "Shot distance",
-    category: "Visual",
-    definition: "How close or far the subject appears in the frame.",
-    use: "Close shots can intensify intimacy while distant shots create detachment."
-  },
-  {
-    term: "Third person",
-    category: "Grammar",
-    definition: "A voice using he, she, they, or names instead of I or you.",
-    use: "Can create distance, objectivity, or broader scope."
-  },
-  {
-    term: "Topic sentence",
-    category: "Argument",
-    definition: "The opening sentence of a paragraph that states its main claim.",
-    use: "Keeps paragraphs focused and clearly structured."
-  },
-  {
-    term: "White space",
-    category: "Visual",
-    definition: "Empty design space left around content.",
-    use: "Can create elegance, clarity, and stronger emphasis."
-  },
-  {
-    term: "Zoomorphism",
-    category: "Language",
-    definition: "Describing a person with animal-like qualities.",
-    use: "Can reduce, mock, or intensify a character's portrayal."
-  }
+    note: "Softer than metaphor — the hedge is built in. Sometimes the hedge is the point." },
+  { term: "Slang", category: "Language",
+    definition: "In-group informal language.",
+    note: "Identify it and analyse it; never write in it. Checklist rule number one." },
+  { term: "Slogan", category: "Visual",
+    definition: "The short line engineered to be remembered." },
+  { term: "Soliloquy", category: "Literature",
+    definition: "A character alone on stage, thinking out loud.",
+    note: "The only time drama lets us straight into someone's head." },
+  { term: "Speaker", category: "Literature",
+    definition: "The voice in a poem or lyric.",
+    note: "Not the poet. See also: persona." },
+  { term: "Speech bubble", category: "Visual",
+    definition: "The container for dialogue in a cartoon.",
+    note: "Shaky outline, jagged edges, sheer size — the bubble itself carries tone." },
+  { term: "Stanza", category: "Literature",
+    definition: "A poem's version of a paragraph.",
+    note: "A stanza break is a breath, a jump cut, or a wall. Decide which." },
+  { term: "Structure", category: "Argument",
+    definition: "The organising shape of the whole text.",
+    note: "Zoom out: what changed between the start and the end, and where's the hinge?" },
+  { term: "Symbolism", category: "Language",
+    definition: "A concrete thing standing in for an abstract one.",
+    note: "The dissolving elephant: sand as time running out, made literal." },
+  { term: "Synthesis", category: "Argument",
+    definition: "Pulling separate threads together into one larger claim.",
+    note: "What conclusions are actually for. Not summary — combination." },
+  { term: "Syntax", category: "Grammar",
+    definition: "How the sentence itself is built.",
+    note: "A long winding sentence, then a short one. That snap is syntax doing tone." },
+  { term: "Target audience", category: "Visual",
+    definition: "Who the text is engineered to reach.",
+    note: "Be specific: \"young men eligible to enlist\", not \"everyone\"." },
+  { term: "Theme", category: "Literature",
+    definition: "The underlying concern the text keeps circling.",
+    note: "The topic is \"war\"; the theme is what the text says about war." },
+  { term: "Thesis", category: "Argument",
+    definition: "The essay's central argument, in one or two sentences.",
+    note: "If I can't say it out loud in one breath, it isn't ready." },
+  { term: "Tone", category: "Language",
+    definition: "The writer's attitude toward the subject.",
+    note: "Two precise adjectives beat five vague ones." },
+  { term: "Transnational", category: "Oral & IO",
+    definition: "Crosses borders and cultures.",
+    note: "The quick test for whether a global issue is actually global." },
+  { term: "Tricolon", category: "Language",
+    definition: "Three parallel items in a row.",
+    note: "Sounds finished, confident, quotable. Politicians can't resist it." },
+  { term: "Typography", category: "Visual",
+    definition: "The design of the text itself — font, size, weight, spacing.",
+    note: "Bold capitals shout. Serif whispers heritage. The font is content too." },
+  { term: "Understatement", category: "Language",
+    definition: "Playing something down on purpose.",
+    note: "Larkin's speciality. The flatness is where the sadness hides." },
+  { term: "Verb", category: "Grammar",
+    definition: "The action word of the sentence.",
+    note: "\"Trudged\" versus \"walked\" — a precise verb is free tone." },
+  { term: "Visual hierarchy", category: "Visual",
+    definition: "The order the design makes you read things in." },
+  { term: "Visual pun", category: "Visual",
+    definition: "A joke made with images instead of words.",
+    note: "The axe swapped for the golf club. One image, entire argument." },
+  { term: "Volta", category: "Literature",
+    definition: "The turn — the point where a poem changes direction.",
+    note: "Find the volta and the structure paragraph is half written." },
+  { term: "Zoom in", category: "Oral & IO",
+    definition: "Close analysis of one small choice — a word, a phrase, a single image.",
+    note: "One word can carry a whole paragraph if I actually unpack it." },
+  { term: "Zoom out", category: "Oral & IO",
+    definition: "Connecting that small choice back to the whole text or the global issue.",
+    note: "The zoom-in is worthless without this step." },
+  { term: "Brand identity", category: "Visual",
+    definition: "The consistent personality a brand performs across everything it makes." },
+  { term: "Colon", category: "Grammar",
+    definition: "Introduces the payoff: a list, an explanation, an emphasis." },
+  { term: "Comma", category: "Grammar",
+    definition: "The light pause — the traffic control of a sentence." },
+  { term: "Denotation", category: "Language",
+    definition: "The flat dictionary meaning of a word.",
+    note: "Only interesting when set against connotation." },
+  { term: "Free verse", category: "Literature",
+    definition: "Poetry with no fixed meter or rhyme scheme.",
+    note: "The freedom is a choice too — say what it allows the poet to do." },
+  { term: "Full stop", category: "Grammar",
+    definition: "The hard stop.",
+    note: "A short sentence ending in one can land like a verdict." },
+  { term: "Grid layout", category: "Visual",
+    definition: "Content locked into strict rows and columns." },
+  { term: "Hook", category: "Argument",
+    definition: "The opening line that earns the audience's attention.",
+    note: "Plan mine before the oral, not during it." },
+  { term: "Internal rhyme", category: "Literature",
+    definition: "Rhyme happening inside the line rather than at its end." },
+  { term: "Logo", category: "Visual",
+    definition: "The brand's visual signature." },
+  { term: "Meter", category: "Literature",
+    definition: "The rhythm pattern of stressed and unstressed syllables.",
+    note: "Regular meter reads as control. A broken meter says: look here." },
+  { term: "Parallelism", category: "Language",
+    definition: "Repeating the same grammatical shape across phrases." },
+  { term: "Perspective (visual)", category: "Visual",
+    definition: "The viewpoint built into the image itself.",
+    note: "Who looks down, who looks up, who is level with us." },
+  { term: "Question mark", category: "Grammar",
+    definition: "Marks a question — real, or rhetorical." },
+  { term: "Second person", category: "Grammar",
+    definition: "You, your — the text reaching out of the page.",
+    note: "Adverts and posters live here. It is aimed at you, personally." },
+  { term: "Shot distance", category: "Visual",
+    definition: "How close the subject appears in the frame.",
+    note: "Close-up: intimacy or scrutiny. Long shot: context or loneliness." },
+  { term: "Third person", category: "Grammar",
+    definition: "He, she, they — names instead of I or you." },
+  { term: "Topic sentence", category: "Argument",
+    definition: "The first line of a paragraph, carrying its claim.",
+    note: "Examiners read these first. Make them do the arguing." },
+  { term: "White space", category: "Visual",
+    definition: "The deliberate emptiness left in a design.",
+    note: "Looks expensive for a reason: it says we don't need to shout." },
+  { term: "Zoomorphism", category: "Language",
+    definition: "Describing a person through animal traits.",
+    note: "Dehumanising or liberating, depending on the animal." }
 ];
 
 const glossarySearch = $("#glossarySearch");
@@ -1139,7 +632,7 @@ function renderGlossary() {
 
     const inSearch =
       !query ||
-      `${item.term} ${item.category} ${item.definition} ${item.use}`
+      `${item.term} ${item.category} ${item.definition} ${item.note || ""}`
         .toLowerCase()
         .includes(query);
 
@@ -1147,14 +640,17 @@ function renderGlossary() {
   });
 
   if (glossaryCount) {
-    glossaryCount.textContent = `${filtered.length} of ${sortedGlossary.length}`;
+    glossaryCount.textContent =
+      filtered.length === sortedGlossary.length
+        ? `All ${sortedGlossary.length} terms`
+        : `${filtered.length} of ${sortedGlossary.length} terms`;
   }
 
   if (!filtered.length) {
     glossaryList.innerHTML = `
       <article class="empty-state">
-        <h3>No matching terms</h3>
-        <p>Try a broader keyword or switch the category filter back to All.</p>
+        <h3>Nothing matches that</h3>
+        <p>Try fewer letters, or flick the category filter back to All.</p>
       </article>
     `;
     return;
@@ -1163,13 +659,13 @@ function renderGlossary() {
   glossaryList.innerHTML = filtered
     .map(
       (item) => `
-        <article class="term-card">
+        <article class="term-card" data-cat="${item.category}">
           <div class="term-head">
             <h3>${item.term}</h3>
             <span class="term-category">${item.category}</span>
           </div>
           <p>${item.definition}</p>
-          <p><strong>Use:</strong> ${item.use}</p>
+          ${item.note ? `<p class="term-note">${item.note}</p>` : ""}
         </article>
       `
     )
@@ -1182,6 +678,65 @@ if (glossarySearch) {
 
 renderGlossaryFilters();
 renderGlossary();
+
+// Quiz mode: shows a definition from the current category, hides the term.
+const quizButton = $("#quizButton");
+const quizCard = $("#quizCard");
+let lastQuizTerm = null;
+
+function startQuiz() {
+  if (!quizCard) {
+    return;
+  }
+
+  const pool = sortedGlossary.filter(
+    (item) => activeGlossaryFilter === "All" || item.category === activeGlossaryFilter
+  );
+
+  if (!pool.length) {
+    return;
+  }
+
+  let pick = pool[Math.floor(Math.random() * pool.length)];
+  if (pool.length > 1) {
+    while (pick === lastQuizTerm) {
+      pick = pool[Math.floor(Math.random() * pool.length)];
+    }
+  }
+  lastQuizTerm = pick;
+
+  const scopeLabel =
+    activeGlossaryFilter === "All" ? "" : ` <span class="quiz-scope">(${activeGlossaryFilter})</span>`;
+
+  quizCard.hidden = false;
+  quizCard.innerHTML = `
+    <p class="quiz-label">Which term is this?${scopeLabel}</p>
+    <p class="quiz-definition">${pick.definition}</p>
+    <div class="quiz-actions">
+      <button class="quiz-reveal" type="button">Reveal</button>
+      <button class="quiz-next" type="button">Another one</button>
+      <button class="quiz-close" type="button">Done</button>
+    </div>
+  `;
+
+  $(".quiz-reveal", quizCard).addEventListener("click", (event) => {
+    event.target.disabled = true;
+    $(".quiz-definition", quizCard).insertAdjacentHTML(
+      "afterend",
+      `<p class="quiz-answer">${pick.term}${pick.note ? ` <span class="quiz-note">— ${pick.note}</span>` : ""}</p>`
+    );
+  });
+
+  $(".quiz-next", quizCard).addEventListener("click", startQuiz);
+  $(".quiz-close", quizCard).addEventListener("click", () => {
+    quizCard.hidden = true;
+    quizCard.innerHTML = "";
+  });
+}
+
+if (quizButton) {
+  quizButton.addEventListener("click", startQuiz);
+}
 
 const lightbox = $("#lightbox");
 const lightboxImage = $("#lightboxImage");
